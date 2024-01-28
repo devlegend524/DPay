@@ -313,7 +313,7 @@ try {
 
     chk.addEventListener('change',changeTheme);
 } catch (err) {
-    
+    console.log("change theme error", err)
 }
 
 
