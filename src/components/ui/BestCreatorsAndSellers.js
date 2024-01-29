@@ -708,7 +708,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500"
               >
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-lightning-bolt"></i> Buy Now</a
                 >
@@ -748,7 +748,7 @@ export default function BestCreatorsAndSellers() {
 
               <div className="my-3">
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="font-semibold hover:text-violet-600"
                   >Genuine Undead #3902</a
                 >
@@ -795,7 +795,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500"
               >
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-lightning-bolt"></i> Buy Now</a
                 >
@@ -835,7 +835,7 @@ export default function BestCreatorsAndSellers() {
 
               <div className="my-3">
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="font-semibold hover:text-violet-600"
                   >Windchime #768</a
                 >
@@ -882,7 +882,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500"
               >
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-lightning-bolt"></i> Buy Now</a
                 >
@@ -922,7 +922,7 @@ export default function BestCreatorsAndSellers() {
 
               <div className="my-3">
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="font-semibold hover:text-violet-600"
                   >Probably A Label #3277</a
                 >
@@ -969,7 +969,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500"
               >
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-lightning-bolt"></i> Buy Now</a
                 >
@@ -1009,7 +1009,7 @@ export default function BestCreatorsAndSellers() {
 
               <div className="my-3">
                 <a
-                  href="item-detail.html"
+                  href="/item"
                   className="font-semibold hover:text-violet-600"
                   >Probably A Label #1711</a
                 >
@@ -1088,9 +1088,9 @@ export default function BestCreatorsAndSellers() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                   </button>
@@ -1133,9 +1133,9 @@ export default function BestCreatorsAndSellers() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                   </button>
@@ -1178,9 +1178,9 @@ export default function BestCreatorsAndSellers() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                   </button>
@@ -1223,9 +1223,9 @@ export default function BestCreatorsAndSellers() {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       ></path>
                     </svg>
                   </button>
