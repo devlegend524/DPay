@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BestCreatorsAndSellers from "@/components/ui/BestCreatorsAndSellers";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -36,7 +37,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -55,7 +56,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -74,7 +75,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -93,7 +94,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -112,7 +113,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -130,7 +131,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -149,7 +150,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -168,7 +169,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -186,7 +187,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -205,7 +206,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -224,7 +225,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -242,7 +243,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -261,7 +262,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -284,7 +285,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -303,7 +304,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -322,7 +323,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -341,7 +342,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -360,7 +361,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -379,7 +380,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -397,7 +398,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -416,7 +417,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -435,7 +436,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -453,7 +454,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -472,7 +473,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -491,7 +492,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -509,7 +510,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -528,7 +529,7 @@ export default function Home() {
 
                   <div className="absolute -bottom-20 group-hover:bottom-1/2 group-hover:translate-y-1/2 start-0 end-0 mx-auto text-center transition-all duration-500">
                     <a
-                      href="item-detail.html"
+                      href="/item"
                       className="btn btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                     >
                       <i className="mdi mdi-gavel"></i> Bid Now
@@ -540,6 +541,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <BestCreatorsAndSellers/>
+
+
     </div>
   );
 }

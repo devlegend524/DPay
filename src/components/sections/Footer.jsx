@@ -1,4 +1,12 @@
 import React from "react";
+import { FaAngleDoubleRight } from "react-icons/fa";
+import { CiYoutube } from "react-icons/ci";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { SiInstagram } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -68,44 +76,44 @@ export default function Footer() {
                     <li>
                       <a
                         href="explore-one.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Explore
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Explore
                         Item
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="auction.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Live
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Live
                         Auction
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="activity.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i>{" "}
+                        <FaAngleDoubleRight className="me-1 mt-1"/>{" "}
                         Activities
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="wallet.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Wallets
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Wallets
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="creators.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Creators
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Creators
                       </a>
                     </li>
                   </ul>
@@ -119,52 +127,52 @@ export default function Footer() {
                     <li>
                       <a
                         href="aboutus.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> About Us
+                        <FaAngleDoubleRight className="me-1 mt-1"/> About Us
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="blogs.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Blog &
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Blog &
                         News
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="terms.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Terms &
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Terms &
                         Condition
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="privacy.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Privacy
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Privacy
                         policy
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="login.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Login
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Login
                       </a>
                     </li>
                     <li className="mt-[10px]">
                       <a
                         href="contact.html"
-                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                        className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <i className="uil uil-angle-right-b me-1"></i> Contact
+                        <FaAngleDoubleRight className="me-1 mt-1"/> Contact
                         Us
                       </a>
                     </li>
@@ -206,7 +214,7 @@ export default function Footer() {
                       <div className="">
                         <a
                           href="mailto:contact@example.com"
-                          className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                          className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                         >
                           contact@example.com
                         </a>
@@ -221,7 +229,7 @@ export default function Footer() {
                       <div className="">
                         <a
                           href="tel:+152534-468-854"
-                          className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                          className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                         >
                           +152 534-468-854
                         </a>
@@ -257,44 +265,11 @@ export default function Footer() {
             <ul className="list-none md:text-end text-center">
               <li className="inline">
                 <a
-                  href="https://1.envato.market/giglink"
+                  href="#"
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <i
-                    className="uil uil-shopping-cart align-middle"
-                    title="Buy Now"
-                  ></i>
-                </a>
-              </li>
-              <li className="inline">
-                <a
-                  href="https://dribbble.com/shreethemes"
-                  target="_blank"
-                  className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
-                >
-                  <i
-                    className="uil uil-dribbble align-middle"
-                    title="dribbble"
-                  ></i>
-                </a>
-              </li>
-              <li className="inline">
-                <a
-                  href="https://www.behance.net/shreethemes"
-                  target="_blank"
-                  className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
-                >
-                  <i className="uil uil-behance" title="Behance"></i>
-                </a>
-              </li>
-              <li className="inline">
-                <a
-                  href="http://linkedin.com/company/shreethemes"
-                  target="_blank"
-                  className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
-                >
-                  <i className="uil uil-linkedin" title="Linkedin"></i>
+                  <CiYoutube className=" align-middle"/>
                 </a>
               </li>
               <li className="inline">
@@ -303,45 +278,53 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <i
-                    className="uil uil-facebook-f align-middle"
-                    title="facebook"
-                  ></i>
+                  <FaXTwitter className=" align-middle"/>
                 </a>
               </li>
               <li className="inline">
                 <a
-                  href="https://www.instagram.com/shreethemes/"
+                  href="/"
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <i
-                    className="uil uil-instagram align-middle"
-                    title="instagram"
-                  ></i>
+                  <SiInstagram className=" align-middle"/>
                 </a>
               </li>
+
               <li className="inline">
                 <a
-                  href="https://twitter.com/shreethemes"
+                  href="/"
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <i
-                    className="uil uil-twitter align-middle"
-                    title="twitter"
-                  ></i>
+                  <FaTelegramPlane className=" align-middle"/>
                 </a>
               </li>
               <li className="inline">
                 <a
-                  href="mailto:support@shreethemes.in"
+                  href="/"
+                  target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <i
-                    className="uil uil-envelope align-middle"
-                    title="email"
-                  ></i>
+                  <FaDiscord className=" align-middle"/>
+                </a>
+              </li>
+              <li className="inline">
+                <a
+                  href="/"
+                  target="_blank"
+                  className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
+                >
+                  <CiLinkedin className=" align-middle"/>
+                </a>
+              </li>
+              <li className="inline">
+                <a
+                  href="/"
+                  target="_blank"
+                  className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
+                >
+                  <FaFacebook className=" align-middle"/>
                 </a>
               </li>
             </ul>

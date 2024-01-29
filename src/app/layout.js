@@ -1,11 +1,18 @@
+'use client'
+import React from "react";
 import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/sections/Navbar";
 import "@/styles/globals.css";
 import Script from "next/script";
+import { LuArrowBigUp } from "react-icons/lu";
+import { FaMoon } from "react-icons/fa";
+import { MdOutlineWbSunny } from "react-icons/md";
+import FixedLeftBar from "@/components/ui/FixedLeftBar";
 
 export default function RootLayout({ children }) {
+  
   return (
-    <html lang="en">
+    <html lang="en" className="dark" dir="ltr">
       <head>
         <link
           href="/assets/libs/tiny-slider/tiny-slider.css"
@@ -24,9 +31,10 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/tailwind.min.css" />
       </head>
 
-      <body className="font-urbanist text-base text-black dark:text-white dark:bg-slate-900">
+      <body className="font-urbanist bg-white text-base text-black dark:text-white dark:bg-slate-900">
         <Navbar />
-        {children}
+          {children}
+        <FixedLeftBar/>
         <Footer />
 
         <Script src="/assets/libs/tiny-slider/min/tiny-slider.js"></Script>

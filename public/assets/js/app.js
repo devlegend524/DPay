@@ -141,7 +141,7 @@ function activateMenu() {
 if (document.getElementById("navigation")) {
     var elements = document.getElementById("navigation").getElementsByTagName("a");
     for (var i = 0, len = elements.length; i < len; i++) {
-        elements[i].onclick = function (elem) {
+        elements[i].onlick = function (elem) {
             if (elem.target.getAttribute("href") === "javascript:void(0)") {
                 var submenu = elem.target.nextElementSibling.nextElementSibling;
                 submenu.classList.toggle('open');
@@ -313,7 +313,7 @@ try {
 
     chk.addEventListener('change',changeTheme);
 } catch (err) {
-    
+    console.log("change theme error", err)
 }
 
 
