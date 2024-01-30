@@ -78,7 +78,7 @@ export default function Footer() {
                         href="explore-one.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Explore
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Explore
                         Item
                       </a>
                     </li>
@@ -87,7 +87,7 @@ export default function Footer() {
                         href="auction.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Live
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Live
                         Auction
                       </a>
                     </li>
@@ -96,8 +96,7 @@ export default function Footer() {
                         href="activity.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/>{" "}
-                        Activities
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Activities
                       </a>
                     </li>
                     <li className="mt-[10px]">
@@ -105,7 +104,7 @@ export default function Footer() {
                         href="wallet.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Wallets
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Wallets
                       </a>
                     </li>
                     <li className="mt-[10px]">
@@ -113,7 +112,7 @@ export default function Footer() {
                         href="creators.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Creators
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Creators
                       </a>
                     </li>
                   </ul>
@@ -129,7 +128,7 @@ export default function Footer() {
                         href="aboutus.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> About Us
+                        <FaAngleDoubleRight className="me-1 mt-1" /> About Us
                       </a>
                     </li>
                     <li className="mt-[10px]">
@@ -137,8 +136,7 @@ export default function Footer() {
                         href="blogs.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Blog &
-                        News
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Blog & News
                       </a>
                     </li>
                     <li className="mt-[10px]">
@@ -146,7 +144,7 @@ export default function Footer() {
                         href="terms.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Terms &
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Terms &
                         Condition
                       </a>
                     </li>
@@ -155,7 +153,7 @@ export default function Footer() {
                         href="privacy.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Privacy
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Privacy
                         policy
                       </a>
                     </li>
@@ -164,7 +162,7 @@ export default function Footer() {
                         href="login.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Login
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Login
                       </a>
                     </li>
                     <li className="mt-[10px]">
@@ -172,8 +170,7 @@ export default function Footer() {
                         href="contact.html"
                         className="text-[16px] text-gray-300 hover:text-gray-400 duration-500 ease-in-out flex align-middle text-center"
                       >
-                        <FaAngleDoubleRight className="me-1 mt-1"/> Contact
-                        Us
+                        <FaAngleDoubleRight className="me-1 mt-1" /> Contact Us
                       </a>
                     </li>
                   </ul>
@@ -247,19 +244,19 @@ export default function Footer() {
         <div className="container text-center">
           <div className="grid md:grid-cols-2 items-center gap-6">
             <div className="md:text-start text-center">
-              <p className="mb-0 text-gray-300">
-                © <script>document.write(new Date().getFullYear())</script>{" "}
-                Giglink. Design with{" "}
+              <div className="mb-0 text-gray-300 flex">
+                © 2024 Dpay. Design with{" "}
                 <i className="mdi mdi-heart text-red-600"></i> by{" "}
                 <a
                   href="../../shreethemes_default.html"
                   target="_blank"
                   className="text-reset"
                 >
-                  Shreethemes
+                  {" "}
+                  Austin
                 </a>
                 .
-              </p>
+              </div>
             </div>
 
             <ul className="list-none md:text-end text-center">
@@ -269,7 +266,7 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <CiYoutube className=" align-middle"/>
+                  <CiYoutube className=" align-middle" />
                 </a>
               </li>
               <li className="inline">
@@ -278,7 +275,7 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <FaXTwitter className=" align-middle"/>
+                  <FaXTwitter className=" align-middle" />
                 </a>
               </li>
               <li className="inline">
@@ -287,7 +284,7 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <SiInstagram className=" align-middle"/>
+                  <SiInstagram className=" align-middle" />
                 </a>
               </li>
 
@@ -297,7 +294,7 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <FaTelegramPlane className=" align-middle"/>
+                  <FaTelegramPlane className=" align-middle" />
                 </a>
               </li>
               <li className="inline">
@@ -306,7 +303,7 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <FaDiscord className=" align-middle"/>
+                  <FaDiscord className=" align-middle" />
                 </a>
               </li>
               <li className="inline">
@@ -315,7 +312,7 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <CiLinkedin className=" align-middle"/>
+                  <CiLinkedin className=" align-middle" />
                 </a>
               </li>
               <li className="inline">
@@ -324,7 +321,7 @@ export default function Footer() {
                   target="_blank"
                   className="btn btn-icon btn-sm border border-gray-800 rounded-md hover:border-violet-600 dark:hover:border-violet-600 hover:bg-violet-600 dark:hover:bg-violet-600"
                 >
-                  <FaFacebook className=" align-middle"/>
+                  <FaFacebook className=" align-middle" />
                 </a>
               </li>
             </ul>

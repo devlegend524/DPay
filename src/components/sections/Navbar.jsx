@@ -42,7 +42,7 @@ export default function Navbar() {
         <div id="navigation">
           <ul className="navigation-menu nav-light justify-end">
             <li className="has-submenu parent-parent-menu-item">
-              <a href="javascript:void(0)">Explore</a>
+              <a href="/">Explore</a>
               <span className="menu-arrow"></span>
               
             </li>
@@ -54,7 +54,7 @@ export default function Navbar() {
             </li>
 
             <li className="has-submenu parent-parent-menu-item">
-              <a href="javascript:void(0)">Pages</a>
+              <a href="/">Pages</a>
               <span className="menu-arrow"></span>
               
             </li>

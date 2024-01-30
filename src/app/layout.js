@@ -1,16 +1,11 @@
-'use client'
 import React from "react";
 import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/sections/Navbar";
 import "@/styles/globals.css";
 import Script from "next/script";
-import { LuArrowBigUp } from "react-icons/lu";
-import { FaMoon } from "react-icons/fa";
-import { MdOutlineWbSunny } from "react-icons/md";
 import FixedLeftBar from "@/components/ui/FixedLeftBar";
 
 export default function RootLayout({ children }) {
-  
   return (
     <html lang="en" className="dark" dir="ltr">
       <head>
@@ -18,11 +13,6 @@ export default function RootLayout({ children }) {
           href="/assets/libs/tiny-slider/tiny-slider.css"
           rel="stylesheet"
         />
-        {/* <link
-          href="/assets/libs/_iconscout/unicons/css/line.css"
-          type="text/css"
-          rel="stylesheet"
-        /> */}
         <link
           href="/assets/libs/_mdi/font/css/materialdesignicons.min.css"
           rel="stylesheet"
@@ -33,8 +23,8 @@ export default function RootLayout({ children }) {
 
       <body className="font-urbanist bg-white text-base text-black dark:text-white dark:bg-slate-900">
         <Navbar />
-          {children}
-        <FixedLeftBar/>
+        {children}
+        <FixedLeftBar />
         <Footer />
 
         <Script src="/assets/libs/tiny-slider/min/tiny-slider.js"></Script>

@@ -718,7 +718,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500"
               >
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-plus"></i
                 ></a>
@@ -805,7 +805,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500"
               >
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-plus"></i
                 ></a>
@@ -892,7 +892,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500"
               >
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-plus"></i
                 ></a>
@@ -979,7 +979,7 @@ export default function BestCreatorsAndSellers() {
                 className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500"
               >
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"
                   ><i className="mdi mdi-plus"></i
                 ></a>

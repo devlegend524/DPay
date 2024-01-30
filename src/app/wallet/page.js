@@ -22,7 +22,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -47,7 +47,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -72,7 +72,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -97,7 +97,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -122,7 +122,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -147,7 +147,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -172,7 +172,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -197,7 +197,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -222,7 +222,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -247,7 +247,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i
@@ -272,7 +272,7 @@ export default function Wallet() {
               <p className="text-slate-400 mt-3">
                 Learn about how to get the wallet and much more clicking
                 <a
-                  href="javascript:void(0)"
+                  href="/"
                   data-modal-toggle="loginform"
                   className="btn btn-link text-violet-600 hover:text-violet-600 after:bg-violet-600 duration-500 ease-in-out"
                   >here <i className="uil uil-arrow-right"></i

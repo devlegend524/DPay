@@ -75,7 +75,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -114,7 +114,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
 
                             <div className="absolute bottom-2 start-0 end-0 mx-auto text-center bg-gradient-to-r from-violet-600 to-red-600 text-white inline-table text-lg px-3 rounded-full">
@@ -157,7 +157,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -196,7 +196,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -235,7 +235,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -274,7 +274,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -313,7 +313,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
 
                             <div className="absolute bottom-2 start-0 end-0 mx-auto text-center bg-gradient-to-r from-violet-600 to-red-600 text-white inline-table text-lg px-3 rounded-full">
@@ -356,7 +356,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -395,7 +395,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -434,7 +434,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -473,7 +473,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 
@@ -512,7 +512,7 @@ export default function page() {
                             </div>
 
                             <div className="absolute top-2 end-2 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                <a href="javascript:void(0)" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
+                                <a href="/" className="btn btn-icon btn-sm rounded-full bg-violet-600 hover:bg-violet-700 border-violet-600 hover:border-violet-700 text-white"><i className="mdi mdi-plus"></i></a>
                             </div>
                         </div>
 

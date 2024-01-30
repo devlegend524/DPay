@@ -541,9 +541,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <BestCreatorsAndSellers/>
-
-
+      <BestCreatorsAndSellers />
     </div>
   );
 }
