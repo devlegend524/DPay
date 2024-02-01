@@ -29,7 +29,7 @@ const InscriptionList = () => {
               key={index}
               className="flex relative justify-between w-full rounded px-4 py-2 m-1 items-center bg-[#1a537798] drop-shadow hover:bg-[#246da1cb] transition ease-in-out"
             >
-              <div className="font-extralight">{item.blockNumber}.LiteMap</div>
+              <div className="font-extralight">{item.blockNumber}.Dpay</div>
               <div className="flex items-center justify-center">
                 <FaTimes
                   onClick={(e) => removeBlock(item.blockNumber)}

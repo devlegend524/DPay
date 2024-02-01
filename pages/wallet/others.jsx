@@ -1,4 +1,4 @@
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import { WalletContext } from "@/context/wallet";
 import { useContext, useState } from "react";
 import { useEffect } from "react";
@@ -12,7 +12,7 @@ import { toast } from "react-hot-toast";
 import Tabs from "@/components/UI/Tabs";
 import Head from "next/head";
 import Others from "@/components/sections/Others";
-import { useLastBlock } from "../../store/hooks";
+import { useLastBlock } from "@/store/hooks";
 
 export default function WalletOthers() {
   const wallet = useContext(WalletContext);

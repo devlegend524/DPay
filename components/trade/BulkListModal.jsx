@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
-import { useWallet } from "../../store/hooks";
+import { useWallet } from "@/store/hooks";
 import * as bitcoin from "bitcoinjs-lib";
 import usePSBT from "../../hooks/usePSBT";
 import { getTxHexById, btcTosatoshis, sleep } from "@/utils";
 import { toast } from "react-hot-toast";
-import ReceiveAddress from "../UI/ReceiveAddress";
+import ReceiveAddress from "@/components/UI/ReceiveAddress";
 import { useContext } from "react";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 import {
   ref,
   push,
@@ -23,7 +23,7 @@ import { db } from "@/services/firebase";
 import { AiOutlineLoading } from "react-icons/ai";
 import { FaTimes } from "react-icons/fa";
 import { Psbt } from "bitcoinjs-lib";
-import useActivities from "../../hooks/useActivities";
+import useActivities from "@/hooks/useActivities";
 
 export default function BulkListModal({
   modalIsOpen,

@@ -8,7 +8,7 @@ import { initialize, setBulkMintBlocks } from "@/store/slices/inscribe";
 import { TfiPanel } from "react-icons/tfi";
 import Modal from "react-modal";
 import { useBlocks } from "../store/hooks";
-import LastMints from "./UI/LastMints";
+import LastMints from "@/components/UI/LastMints";
 
 export default function ControlPanel({ from, to }) {
   const router = useRouter();

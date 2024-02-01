@@ -8,18 +8,7 @@ const initialState = {
     vault: {},
     preVault: {},
     account: {},
-    balance: {
-      amount: 0.0,
-      btc_amount: 0.0,
-      confirm_amount: 0.0,
-      confirm_btc_amount: "0.000",
-      confirm_inscription_amount: 0,
-      inscription_amount: 0,
-      pending_amount: 0,
-      pending_btc_amount: "0.00",
-      pending_inscription_amount: 0,
-      usd_value: 0,
-    },
+    balance: 0,
     bitcoinTx: {
       txId: "",
       toAddress: "",
@@ -33,6 +22,7 @@ const initialState = {
     },
     ltc20: { total: 0, list: [] },
     price: 71,
+    utxos: [],
   },
 };
 
@@ -75,7 +65,8 @@ export const wallet = createSlice({
     },
     updateBalance: (state, action) => {
       state.value.inscriptions = action.payload.inscriptions;
-      state.value.balance = action.payload.ltcBalance;
+      state.value.balance = action.payload.balance;
+      state.value.utxos = action.payload.utxos;
       state.value.ltc20 = action.payload.ltc20;
     },
   },
@@ -93,6 +84,6 @@ export const {
   updateBitcoinTx,
   updateInscriptions,
   updatePrice,
-  updateBalance
+  updateBalance,
 } = wallet.actions;
 export default wallet.reducer;

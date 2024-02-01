@@ -1,5 +1,5 @@
 import React from "react";
-import { useBlocks } from "../../store/hooks";
+import { useBlocks } from "@/store/hooks";
 
 export default function LastMints() {
   const { mintedBlocks } = useBlocks();

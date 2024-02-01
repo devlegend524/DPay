@@ -1,4 +1,4 @@
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import Link from "next/link";
 
 export default function Error() {

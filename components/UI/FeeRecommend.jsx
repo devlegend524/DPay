@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import React, { useContext } from "react";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 
 const FeeRateType = {
   SLOW: 0,

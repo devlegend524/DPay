@@ -1,4 +1,4 @@
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import InscriptionCard from "@/components/UI/InscriptionCard";
 import { WalletContext } from "@/context/wallet";
 import { useContext, useState } from "react";
@@ -15,9 +15,9 @@ import BulkListModal from "@/components/trade/BulkListModal";
 import { toast } from "react-hot-toast";
 import Tabs from "@/components/UI/Tabs";
 import Head from "next/head";
-import { useLastBlock } from "../../store/hooks";
+import { useLastBlock } from "@/store/hooks";
 
-export default function WalletLiteMap() {
+export default function WalletDpay() {
   const wallet = useContext(WalletContext);
   const address = wallet.getAddress();
   const { inscriptions } = useWallet();

@@ -10,14 +10,14 @@ import {
 } from 'firebase/database'
 import { db } from '@/services/firebase'
 import { v4 as uuidv4 } from 'uuid'
-import { InscribeLiteMapContext } from './inscribeLiteMap'
+import { InscribeDpayContext } from './inscribeDpay'
 import { useContext } from 'react'
 
 export const InscribeContext = React.createContext()
 
 
 const Inscribe = (props) => {
-  const inscribeLiteMapContext = useContext(InscribeLiteMapContext)
+  const inscribeDpayContext = useContext(InscribeDpayContext)
   const [minted, setMinted] = useState(false)
   const [mintFailed, setMintFailed] = useState(false)
   const [paymentAddress, setPaymentAddress] = useState()
@@ -171,7 +171,7 @@ const Inscribe = (props) => {
   const inscribeOrder = async () => {
     let files = []
     selectedBlock.map((item) => {
-      let text = item.blockNumber + '.LiteMap'
+      let text = item.blockNumber + '.Dpay'
       let mimetype = 'text/plain;charset=utf-8'
       files.push({
         text: text,
@@ -202,7 +202,7 @@ const Inscribe = (props) => {
           address: exist.address,
         }
 
-        inscribeLiteMapContext.inscribeOrder({
+        inscribeDpayContext.inscribeOrder({
           files: files,
           feerate: serviceFee.hourFee,
           receiveAddress: receiveAddress,

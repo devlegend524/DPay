@@ -12,12 +12,12 @@ import {
 } from "firebase/database";
 import { db } from "@/services/firebase";
 import { toast } from "react-hot-toast";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 import { AiOutlineLoading } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
 import { TbArticleOff } from "react-icons/tb";
 import { TbGiftOff } from "react-icons/tb";
-import useActivities from "../../hooks/useActivities";
+import useActivities from "@/hooks/useActivities";
 import LTCListModal from "../trade/LTCListModal";
 import LTCTransferModal from "../trade/LTCTransferModal";
 

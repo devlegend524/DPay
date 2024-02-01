@@ -11,7 +11,7 @@ import {
 } from "@/utils";
 import { toast } from "react-hot-toast";
 import { useContext } from "react";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 import {
   ref,
   orderByChild,
@@ -26,7 +26,7 @@ import { AiFillCheckCircle, AiOutlineLoading } from "react-icons/ai";
 import BuyBills from "./BuyBills";
 import { feeAddress, service_fee_rate } from "../../configs/constants";
 import { Psbt } from "bitcoinjs-lib";
-import useActivities from "../../hooks/useActivities";
+import useActivities from "@/hooks/useActivities";
 import { MdOutlineCancel } from "react-icons/md";
 
 export default function BuyModal({

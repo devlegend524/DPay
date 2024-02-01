@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillWarning } from "react-icons/ai";
-import { useInscribe, useWallet } from "../../store/hooks";
+import { useInscribe, useWallet } from "@/store/hooks";
 
 export default function Bills() {
   const { selectedBlock } = useInscribe();

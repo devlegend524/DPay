@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "react-bootstrap/Spinner";
 import Moment from "react-moment";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import {

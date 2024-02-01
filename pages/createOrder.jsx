@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import FeeRecommend from "@/components/UI/FeeRecommend";
 import InscriptionList from "@/components/InscriptionList";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import Bills from "@/components/UI/Bills";
 import { useRouter } from "next/router";
 import InputAddress from "../components/UI/InputAddress";
@@ -112,7 +112,7 @@ const CreateOrder = () => {
             <FaArrowLeft className="text-lg mt-3" />
           </div>
           <div className="py-2">
-            <h2 className="text-center text-2xl mb-3">Inscribe LiteMap</h2>
+            <h2 className="text-center text-2xl mb-3">Inscribe Dpay</h2>
           </div>
           <InscriptionList />
           <InputAddress />

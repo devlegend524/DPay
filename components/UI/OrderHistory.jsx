@@ -4,7 +4,7 @@ import { onValue, ref, query, orderByChild, equalTo } from "firebase/database";
 import { db } from "@/services/firebase";
 import { addressFormat } from "@/utils";
 import { useRouter } from "next/router";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import { useContext } from "react";
 import { WalletContext } from "@/context/wallet";
 

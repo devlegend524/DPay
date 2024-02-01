@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { CgWebsite } from "react-icons/cg";
 import { FaTwitter } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
-import InscriptionCardSkelenton from "../UI/InscriptionCardSkelenton";
+import InscriptionCardSkelenton from "@/components/UI/InscriptionCardSkelenton";
 import Link from "next/link";
-import InscriptionCard from "../UI/InscriptionCard";
+import InscriptionCard from "@/components/UI/InscriptionCard";
 import ReactPaginate from "react-paginate";
 
 export default function NFTs({

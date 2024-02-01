@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import InscriptionCardSkelenton from "../UI/InscriptionCardSkelenton";
-import InscriptionCard from "../UI/InscriptionCard";
+import InscriptionCardSkelenton from "@/components/UI/InscriptionCardSkelenton";
+import InscriptionCard from "@/components/UI/InscriptionCard";
 import ReactPaginate from "react-paginate";
 
 export default function Others({

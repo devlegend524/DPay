@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import AddressCheck from "@/components/AddressCheck";
 import { updateReceiveAddress } from "@/store/slices/inscribe";
 import { useDispatch } from "react-redux";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 
 export default function InputAddress() {
   const dispatch = useDispatch();

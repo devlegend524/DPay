@@ -1,12 +1,12 @@
 import openApi from "@/services/openAPI";
 import Head from "next/head";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import Tabs from "@/components/UI/Tabs";
 import LTC20BalanceCard from "../../components/UI/LTC20BalanceCard";
 import ReactPaginate from "react-paginate";
 import { useContext, useEffect, useState } from "react";
 import { MdCancel } from "react-icons/md";
-import { useLastBlock } from "../../store/hooks";
+import { useLastBlock } from "@/store/hooks";
 import { WalletContext } from "@/context/wallet";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 

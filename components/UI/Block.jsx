@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectedBlock, cancelBlock } from "@/store/slices/inscribe";
-import { useBlocks } from "../../store/hooks";
+import { useBlocks } from "@/store/hooks";
 
 export default function Block(props) {
   const dispatch = useDispatch();

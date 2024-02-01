@@ -38,8 +38,12 @@ const nextConfig = {
       },
 
       {
-        source: "/api.dpay.market/:slug*",
-        destination: "https://api.doggy.market/:slug*",
+        source: "/api.dpay.wallet/:slug*",
+        destination: "https://wallet-api.dogeord.io/:slug*",
+      },
+      {
+        source: "/unspent.dogeord/:slug*",
+        destination: "https://unspent.dogeord.io/api/v1/:slug*",
       },
     ];
   },

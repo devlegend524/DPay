@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import CollectionTr from "../components/UI/CollectionTr";
 import Head from "next/head";
 import { useEffect } from "react";

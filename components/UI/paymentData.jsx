@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 import { useState } from "react";
 import { amountToSatoshis } from "@/utils";
 import BillsOnPayment from "./BillsOnPayment";
@@ -11,7 +11,7 @@ import { feeAddress } from "../../configs/constants";
 import { onValue, ref, query, push } from "firebase/database";
 import { db } from "@/services/firebase";
 import { updateConfirmed1 } from "@/store/slices/inscribe";
-import { useInscribe } from "../../store/hooks";
+import { useInscribe } from "@/store/hooks";
 
 export default function PaymentData({ data }) {
   const dispatch = useDispatch();

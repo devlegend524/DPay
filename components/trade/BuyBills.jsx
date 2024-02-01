@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillWarning } from "react-icons/ai";
-import { useWallet } from "../../store/hooks";
+import { useWallet } from "@/store/hooks";
 
 export default function BuyBills({ listingPrice }) {
   const { price } = useWallet();

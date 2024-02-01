@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
-import FeeRecommend from "../UI/FeeRecommend";
+import FeeRecommend from "@/components/UI/FeeRecommend";
 import { FaScissors } from "react-icons/fa6";
 import { useContext } from "react";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 import { toast } from "react-hot-toast";
 import { AiFillCheckCircle, AiOutlineLoading } from "react-icons/ai";
 import { useEffect } from "react";
-import OutputValueBar from "../UI/OutputValueBar";
+import OutputValueBar from "@/components/UI/OutputValueBar";
 import { MdOutlineCancel } from "react-icons/md";
 
 export default function SpliteModal({

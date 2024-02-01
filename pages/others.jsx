@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import {
   onValue,
   ref,

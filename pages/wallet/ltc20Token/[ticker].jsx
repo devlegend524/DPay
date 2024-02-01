@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import openApi from "@/services/openAPI";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import Link from "next/link";
 import Tabs from "@/components/UI/Tabs";
 import { useRouter } from "next/router";

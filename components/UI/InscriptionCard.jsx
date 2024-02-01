@@ -16,12 +16,12 @@ import ListModal from "../trade/ListModal";
 import TransferModal from "../trade/TransferModal";
 import { addressFormat, validateInscription } from "@/utils";
 import { toast } from "react-hot-toast";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 import { AiOutlineLoading } from "react-icons/ai";
 import { FaPlus } from "react-icons/fa";
 import { TbArticleOff } from "react-icons/tb";
 import { TbGiftOff } from "react-icons/tb";
-import useActivities from "../../hooks/useActivities";
+import useActivities from "@/hooks/useActivities";
 import SpliteModal from "../trade/SpliteModal";
 import { useRouter } from "next/router";
 

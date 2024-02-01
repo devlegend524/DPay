@@ -11,8 +11,8 @@ import {
 import { db } from "@/services/firebase";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useLastBlock, useMintedBlocksFromAPI } from "../../store/hooks";
-import NumberFormat from "../UI/NumberFormatter";
+import { useLastBlock, useMintedBlocksFromAPI } from "@/store/hooks";
+import NumberFormat from "@/components/UI/NumberFormatter";
 import Link from "next/link";
 
 export default function Banner({ title, tag, setListedNumber, setLastSales }) {

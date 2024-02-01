@@ -227,7 +227,8 @@ export const INTERNAL_REQUEST_SESSION = {
   icon: './images/logo/logo@128x.png'
 };
 
-export const OPENAPI_URL_MAINNET = '/api.dpay.market';
+export const OPENAPI_URL_MAINNET = '/api.dpay.wallet';
+export const OPENAPI_URL_MAINNET_SYNC = '/unspent.dogeord';
 // export const OPENAPI_URL_MAINNET = 'https://unisat.io/wallet-api-v4';
 export const OPENAPI_URL_TESTNET = 'https://testnet.litescribe.io/api';
 

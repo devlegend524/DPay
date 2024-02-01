@@ -1,4 +1,4 @@
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import BulkListModal from "@/components/trade/BulkListModal";
 import Tabs from "@/components/UI/Tabs";
 import History from "@/components/sections/History";

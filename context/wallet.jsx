@@ -139,24 +139,38 @@ const Wallet = (props) => {
   const fetchbalance = async () => {
     try {
       if (accountInfo?.account) {
-        const ltcBalance = await openApi.getAddressBalance(
+        const res = await openApi.sync(
           accountInfo?.account?.accounts[0]?.address
         );
+
+        const utxos = await openApi.getAddressBalance(
+          accountInfo?.account?.accounts[0]?.address
+        );
+        let balance = 0;
+        if (utxos.length > 0) {
+          utxos.map((utxo) => {
+            balance += utxo.satoshis;
+          });
+        }
+
         const inscriptions = await openApi.getAddressInscriptions(
           accountInfo?.account?.accounts[0]?.address,
           0,
           10000
         );
+
         const ltc20 = await openApi.getAddressTokenBalances(
           accountInfo?.account?.accounts[0]?.address,
           0,
           1000
         );
+
         dispatch(
           updateBalance({
             inscriptions: inscriptions,
-            ltcBalance: ltcBalance,
             ltc20: ltc20,
+            utxos: utxos,
+            balance: balance,
           })
         );
       }
@@ -242,7 +256,7 @@ const Wallet = (props) => {
   const toPsbtNetwork = () => {
     return {
       messagePrefix: "\u0019Dogecoin Signed Message:\n",
-      
+
       bip32: {
         public: 49990397,
         private: 49988504,
@@ -684,10 +698,6 @@ const Wallet = (props) => {
       openApi.setDeviceId(apiInfo?.deviceId);
     }
   }, [apiInfo]);
-
-  useEffect(() => {
-    fetchbalance();
-  }, []);
 
   useEffect(() => {
     getPrice();

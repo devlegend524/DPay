@@ -165,15 +165,15 @@ const WaitingPayment = () => {
                 >
                   <input
                     checked={paymentType === 'chain' ? 'checked' : ''}
-                    id='default-LiteMap-1'
-                    type='LiteMap'
+                    id='default-Dpay-1'
+                    type='Dpay'
                     value={paymentType}
                     onChange={() => handlePaymentType('chain')}
-                    name='default-LiteMap'
+                    name='default-Dpay'
                     className='w-4 h-4 text-gray-300  bg-gray-100 border-gray-300 focus:ring-blue-500'
                   />
                   <label
-                    htmlFor='default-LiteMap-1'
+                    htmlFor='default-Dpay-1'
                     className='ml-2 text-gray-700  cursor-pointer'
                   >
                     Pay on chain BTC
@@ -190,15 +190,15 @@ const WaitingPayment = () => {
                 >
                   <input
                     checked={paymentType === 'wallet' ? 'checked' : ''}
-                    id='default-LiteMap-2'
-                    type='LiteMap'
+                    id='default-Dpay-2'
+                    type='Dpay'
                     value={paymentType}
-                    name='default-LiteMap'
+                    name='default-Dpay'
                     onChange={() => handlePaymentType('wallet')}
                     className='w-4 h-4 text-gray-300  bg-gray-100 border-gray-300 focus:ring-blue-500'
                   />
                   <label
-                    htmlFor='default-LiteMap-2 '
+                    htmlFor='default-Dpay-2 '
                     className='ml-2 text-gray-700  cursor-pointer'
                   >
                     Pay with Wallet

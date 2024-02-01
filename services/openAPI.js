@@ -1,4 +1,9 @@
-const { CHANNEL, OPENAPI_URL_MAINNET, VERSION } = require("@/shared/constant");
+const {
+  CHANNEL,
+  OPENAPI_URL_MAINNET,
+  VERSION,
+  OPENAPI_URL_MAINNET_SYNC,
+} = require("@/shared/constant");
 
 const API_STATUS = {
   FAILED: "0",
@@ -58,9 +63,9 @@ class OpenApiService {
       c++;
     }
     const headers = new Headers();
-    headers.append("X-Client", "Litescribe Wallet");
-    headers.append("X-Version", VERSION);
-    headers.append("x-address", this.clientAddress);
+    headers.append("X-Client", "Doge Labs Wallet");
+    headers.append("X-Version", "1.0.15");
+    headers.append("x-address", "D6wLnUimFyVdG9agWaMMtWB3LbQEK83YFB");
     headers.append("x-channel", CHANNEL);
     headers.append("x-udid", this.store.deviceId);
     try {
@@ -80,9 +85,29 @@ class OpenApiService {
   httpPost = async (route, params) => {
     const url = this.getHost() + route;
     const headers = new Headers();
-    headers.append("X-Client", "Litescribe Wallet");
-    headers.append("X-Version", VERSION);
-    headers.append("x-address", this.clientAddress);
+    headers.append("X-Client", "Doge Labs Wallet");
+    headers.append("X-Version", "1.0.15");
+    headers.append("x-address", "D6wLnUimFyVdG9agWaMMtWB3LbQEK83YFB");
+    headers.append("x-channel", CHANNEL);
+    headers.append("x-udid", this.store.deviceId);
+    headers.append("Content-Type", "application/json;charset=utf-8");
+    const res = await fetch(new Request(url), {
+      method: "POST",
+      headers,
+      mode: "cors",
+      cache: "default",
+      body: JSON.stringify(params),
+    });
+    const data = await res.json();
+    return data;
+  };
+
+  httpSyncPost = async (route, params) => {
+    const url = OPENAPI_URL_MAINNET_SYNC + route;
+    const headers = new Headers();
+    headers.append("X-Client", "Doge Labs Wallet");
+    headers.append("X-Version", "1.0.15");
+    headers.append("x-address", "D6wLnUimFyVdG9agWaMMtWB3LbQEK83YFB");
     headers.append("x-channel", CHANNEL);
     headers.append("x-udid", this.store.deviceId);
     headers.append("Content-Type", "application/json;charset=utf-8");
@@ -106,7 +131,7 @@ class OpenApiService {
   // };
 
   getAddressBalance = async (address) => {
-    const data = await this.httpGet(`/wallet/${address}/balance`);
+    const data = await this.httpGet(`/address/btc-utxo?address=${address}`);
     if (data) {
       if (data.status == API_STATUS.FAILED) {
         console.log(data.message);
@@ -119,7 +144,7 @@ class OpenApiService {
     const data = await this.httpGet("/address/multi-assets", {
       addresses,
     });
-    console.log(data)
+    console.log(data);
     if (data.status == API_STATUS.FAILED) {
       console.log(data.message);
     }
@@ -323,6 +348,14 @@ class OpenApiService {
 
   createOrder = async () => {
     const data = await this.httpPost("/order/create");
+    if (data.status == API_STATUS.FAILED) {
+      console.log(data.message);
+    }
+    return data.result;
+  };
+
+  sync = async (address) => {
+    const data = await this.httpSyncPost("/address/sync", { address });
     if (data.status == API_STATUS.FAILED) {
       console.log(data.message);
     }

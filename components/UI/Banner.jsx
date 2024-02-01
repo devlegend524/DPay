@@ -1,5 +1,5 @@
 import React from "react";
-import { useMintedBlocksFromAPI, useWallet } from "../../store/hooks";
+import { useMintedBlocksFromAPI, useWallet } from "@/store/hooks";
 
 export default function Banner({ lastBlock }) {
   const { price } = useWallet();
@@ -7,7 +7,7 @@ export default function Banner({ lastBlock }) {
 
   return (
     <div className="text-4xl text-center">
-      <h2 className="text-4xl font-bold mt-16 mb-2 text-center">Inscribe LiteMap</h2>
+      <h2 className="text-4xl font-bold mt-16 mb-2 text-center">Inscribe Dpay</h2>
       <p className="text-sm text-center w-full max-w-[900px] mb-4 mx-auto lg:px-[150px]">
         Inscribe dpays & list them to market. LGH!
       </p>

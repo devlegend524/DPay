@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Block from "@/components/UI/Block";
 import Banner from "@/components/UI/Banner";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { useDispatch } from "react-redux";

@@ -3,7 +3,7 @@ import WAValidator from "multicoin-address-validator";
 import { useState } from "react";
 import { useEffect } from "react";
 import AddressCheck from "@/components/AddressCheck";
-import { useAddress } from "../../store/hooks";
+import { useAddress } from "@/store/hooks";
 
 export default function ReceiveAddress({ onChange }) {
   const { address } = useAddress();

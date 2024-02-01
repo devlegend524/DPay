@@ -3,7 +3,7 @@ import { useState } from "react";
 import { addressFormat } from "@/utils";
 import BuyModal from "../trade/BuyModal";
 import { useContext } from "react";
-import { WalletContext } from "../../context/wallet";
+import { WalletContext } from "@/context/wallet";
 import { TbArticleOff } from "react-icons/tb";
 import Link from "next/link";
 import { useRouter } from "next/router";

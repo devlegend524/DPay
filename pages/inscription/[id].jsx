@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Layout from "@/components/sections/Layout";
+import Layout from "@/components/sections/layouts/Layout";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { useState } from "react";

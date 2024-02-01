@@ -12,7 +12,7 @@ import {
   limitToLast,
 } from "firebase/database";
 import { db } from "@/services/firebase";
-import NumberFormat from "../UI/NumberFormatter";
+import NumberFormat from "@/components/UI/NumberFormatter";
 
 export default function NFTCollectionBanner({
   collection,

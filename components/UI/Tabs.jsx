@@ -10,7 +10,7 @@ export default function Tabs({ type, loading }) {
           type == "dpay" ? "main_btn" : ""
         }`}
       >
-        LiteMaps
+        Dpays
       </Link>
       <Link
         href={"/wallet/ltc20"}
