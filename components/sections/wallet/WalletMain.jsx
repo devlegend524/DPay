@@ -52,7 +52,6 @@ export default function WalletMain({ setContentType }) {
     }, [500]);
   };
 
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -129,8 +128,8 @@ export default function WalletMain({ setContentType }) {
           </div>
         </div>
         <div className="mt-3">
-          {balance ? Number(balance / 10 ** 8).toFixed(2) : "0"} ( $
-          {balance ? ((balance / 10 ** 8) * price).toFixed(2) : "0.00"} )
+          {balance ? Number(balance).toFixed(2) : "0"} ( $
+          {balance ? (balance * price).toFixed(2) : "0.00"} )
         </div>
 
         <div className="flex gap-3 mt-3">
@@ -160,7 +159,10 @@ export default function WalletMain({ setContentType }) {
               {inscriptions?.total > 0 ? (
                 <>
                   <div className="mt-3">All Dorginals</div>
-                  <Link href="/" className="rounded-md bg-primary-dark/20 in-card py-3 hover:text-white px-3 flex justify-between items-center hover:bg-primary-dark/30  transition ease-in-out cursor-pointer mt-2 mb-3">
+                  <Link
+                    href="/"
+                    className="rounded-md bg-primary-dark/20 in-card py-3 hover:text-white px-3 flex justify-between items-center hover:bg-primary-dark/30  transition ease-in-out cursor-pointer mt-2 mb-3"
+                  >
                     <div className="flex gap-2 items-center">
                       <p>Dorginals</p>
                     </div>
@@ -237,7 +239,7 @@ export default function WalletMain({ setContentType }) {
               ) : (
                 <>
                   {ltc20?.total > 0 ? (
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-2 gap-2 mt-3">
                       {ltc20.list.map((list) => {
                         return (
                           <div

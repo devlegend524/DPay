@@ -170,7 +170,7 @@ const Wallet = (props) => {
             inscriptions: inscriptions,
             ltc20: ltc20,
             utxos: utxos,
-            balance: balance,
+            balance: balance / 10 ** 8,
           })
         );
       }
@@ -256,7 +256,6 @@ const Wallet = (props) => {
   const toPsbtNetwork = () => {
     return {
       messagePrefix: "\u0019Dogecoin Signed Message:\n",
-
       bip32: {
         public: 49990397,
         private: 49988504,
@@ -273,7 +272,7 @@ const Wallet = (props) => {
   };
 
   const signPsbt = async (psbt, options) => {
-    // console.log("running sign psbt");
+    console.log("running sign psbt");
     const mnemonic = getMnemonic();
 
     const account = await getCurrentAccount();
@@ -309,7 +308,7 @@ const Wallet = (props) => {
         }
       }
     });
-    // console.log("before:", psbt, mnemonic, toSignInputs);
+    console.log("before:", toSignInputs);
     psbt = await keyring.signTransaction(mnemonic, psbt, toSignInputs);
     // const validator =
     if (options && options.autoFinalized == false) {
@@ -322,7 +321,7 @@ const Wallet = (props) => {
         psbt.finalizeInput(v.index);
       });
     }
-    // console.log("after:", psbt);
+    console.log("after:", psbt);
     return psbt;
   };
 
@@ -336,6 +335,7 @@ const Wallet = (props) => {
     if (!currentAccount) console.log("no current account");
 
     const psbtNetwork = toPsbtNetwork();
+    console.log("running", utxos, feeRate);
 
     const psbt = await createSendBTC({
       utxos: utxos.map((v) => {
@@ -357,9 +357,9 @@ const Wallet = (props) => {
       receiverToPayFee,
       pubkey: currentAccount.pubkey,
       feeRate,
-      enableRBF: false,
+      enableRBF: true,
     });
-    // console.log("finialized3333");
+    console.log("finialized3333");
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     //@ts-ignore
     psbt.__CACHE.__UNSAFE_SIGN_NONSEGWIT = false;
@@ -536,8 +536,10 @@ const Wallet = (props) => {
     feeRate,
     receiverToPayFee
   ) => {
+    console.log(toAddressInfo, toAmount, feeRate, receiverToPayFee);
     const fromAddress = accountInfo?.account?.accounts[0]?.address;
     const utxos = await getAddressUtxo(fromAddress);
+    console.log(utxos);
 
     if (utxos.length == 0) {
       toast.error("utxos fetch issue");
@@ -553,24 +555,26 @@ const Wallet = (props) => {
         )} LTC) is lower than ${satoshisToAmount(toAmount)} LTC `
       );
     }
+    console.log(safeBalance);
 
     if (!feeRate) {
       const summary = await getFeeSummary();
       feeRate = summary.list[1].feeRate;
     }
 
-    // console.log("finalized1");
+    console.log("finalized1");
     const psbtHex = await sendBTC({
       to: toAddressInfo.address,
       amount: toAmount,
       utxos: utxos,
       receiverToPayFee,
-      feeRate,
+      feeRate: feeRate,
     });
 
-    // console.log("finalized2");
+    console.log("finalized2");
     const psbt = Psbt.fromHex(psbtHex);
-    const rawtx = psbt.extractTransaction().toHex();
+    // psbt.setMaximumFeeRate(feeRate);
+    const rawtx = psbt.extractTransaction(true).toHex();
     // const fee = psbt.getFee();
     // const rawTxInfo = {
     //   psbtHex,
@@ -578,8 +582,8 @@ const Wallet = (props) => {
     //   toAddressInfo,
     //   fee,
     // };
-    // console.log("rawTxInfo:", rawtx);
-    return rawtx;
+    console.log("rawTxInfo:", rawtx);
+    return { rawtx, psbtHex };
   };
 
   const createMultiBitcoinTx = async (

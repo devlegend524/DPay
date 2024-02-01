@@ -202,7 +202,7 @@ export default function TransferModal({
           <div>
             <AiFillCheckCircle className="text-6xl font-semibold mx-auto text-green-600" />
             <a
-              href={"https://litecoinspace.org/tx/" + tx}
+              href={"https://sochain.com/tx/" + tx}
               className="underline"
               target="_blank"
             >

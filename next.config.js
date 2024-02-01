@@ -36,9 +36,8 @@ const nextConfig = {
         source: "/ordinalsExplorer/:slug*",
         destination: "https://ordinalslite.com/:slug*",
       },
-
       {
-        source: "/api.dpay.wallet/:slug*",
+        source: "/dpay.wallet/:slug*",
         destination: "https://wallet-api.dogeord.io/:slug*",
       },
       {

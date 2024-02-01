@@ -72,7 +72,7 @@ export default function FeeRecommend({ setFeeOption }) {
                       {v.title}
                     </p>
                     {v.title !== "Custom" && (
-                      <p className="text-[9px] text-center">{`${v.feeRate} lit/vB`}</p>
+                      <p className="text-[9px] text-center">{`${v.feeRate} shibe/vB`}</p>
                     )}
                     {v.title !== "Custom" && (
                       <p className="text-center text-[9px]">{`${v.desc}`}</p>
@@ -95,7 +95,7 @@ export default function FeeRecommend({ setFeeOption }) {
         <input
           className="w-full mt-3 bg-transparent py-2 px-2 rounded-md cs-border focus:outline-none"
           preset="amount"
-          placeholder={"lit/vB"}
+          placeholder={"shibe/vB"}
           value={feeRateInputVal}
           onChange={async (e) => {
             adjustFeeRateInput(e.target.value);

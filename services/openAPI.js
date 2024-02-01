@@ -65,7 +65,7 @@ class OpenApiService {
     const headers = new Headers();
     headers.append("X-Client", "Doge Labs Wallet");
     headers.append("X-Version", "1.0.15");
-    headers.append("x-address", "D6wLnUimFyVdG9agWaMMtWB3LbQEK83YFB");
+    headers.append("x-address", "DFrctnLuBta7SUHW3h74G1KsKSvojFeMij");
     headers.append("x-channel", CHANNEL);
     headers.append("x-udid", this.store.deviceId);
     try {
@@ -87,7 +87,7 @@ class OpenApiService {
     const headers = new Headers();
     headers.append("X-Client", "Doge Labs Wallet");
     headers.append("X-Version", "1.0.15");
-    headers.append("x-address", "D6wLnUimFyVdG9agWaMMtWB3LbQEK83YFB");
+    headers.append("x-address", "DFrctnLuBta7SUHW3h74G1KsKSvojFeMij");
     headers.append("x-channel", CHANNEL);
     headers.append("x-udid", this.store.deviceId);
     headers.append("Content-Type", "application/json;charset=utf-8");
@@ -239,14 +239,11 @@ class OpenApiService {
     return data.result;
   };
 
-  pushTx = async (rawtx) => {
+  pushTx = async (rawTx) => {
     const data = await this.httpPost("/tx/broadcast", {
-      rawtx,
+      rawTx
     });
-    if (data.status == API_STATUS.FAILED) {
-      return data.message;
-    }
-    return data.result;
+    return data;
   };
 
   getFeeSummary = async () => {

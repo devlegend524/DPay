@@ -455,7 +455,7 @@ export default function LTCBuyModal({
 
       {dummyTx && (
         <a
-          href={"https://litecoinspace.org/tx/" + dummyTx}
+          href={"https://sochain.com/tx/" + dummyTx}
           target="_blank"
           className="underline mx-auto flex justify-center"
         >
@@ -492,7 +492,7 @@ export default function LTCBuyModal({
             <div>
               <AiFillCheckCircle className="text-6xl font-semibold mx-auto text-green-600" />
               <a
-                href={"https://litecoinspace.org/tx/" + buyTx}
+                href={"https://sochain.com/tx/" + buyTx}
                 className="underline"
                 target="_blank"
               >

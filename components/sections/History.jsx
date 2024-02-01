@@ -123,7 +123,7 @@ export default function History() {
                       {new Date(activities[key]?.date).toDateString()}
                       {activities[key].type !== "Listed" && (
                         <a
-                          href={`https://litecoinspace.org/tx/${activities[key].tx}`}
+                          href={`https://sochain.com/tx/${activities[key].tx}`}
                           className="absolute right-1"
                           target="_blank"
                         >

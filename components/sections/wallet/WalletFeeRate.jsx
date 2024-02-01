@@ -62,12 +62,12 @@ export function FeeRateBar({ onChange }) {
                 setFeeOptionIndex(index);
               }}
               className={`cursor-pointer flex justify-center flex-col rounded-md border border-[#dee2e682!important]  p-2 ${
-                selected && "bg-primary-dark/60 "
+                selected && "fee-selected"
               }`}
             >
               <p className="text-center text-sm font-semibold">{v.title}</p>
               {v.title !== "Custom" && (
-                <p className="text-[9px] text-center">{`${v.feeRate} lit/vB`}</p>
+                <p className="text-[9px] text-center">{`${v.feeRate} shibe/vB`}</p>
               )}
               {v.title !== "Custom" && (
                 <p className="text-center text-[9px]">{`${v.desc}`}</p>
@@ -78,9 +78,9 @@ export function FeeRateBar({ onChange }) {
       </div>
       {feeOptionIndex === FeeRateType.CUSTOM && (
         <input
-         className="w-full mt-3 bg-transparent py-2 px-2 rounded-lg  border border-[#dee2e682!important]  focus:outline-none"
+          className="w-full mt-3 bg-transparent py-2 px-2 rounded-lg  border border-[#dee2e682!important]  focus:outline-none"
           preset="amount"
-          placeholder={"lit/vB"}
+          placeholder={"shibe/vB"}
           value={feeRateInputVal}
           onChange={async (e) => {
             adjustFeeRateInput(e.target.value);

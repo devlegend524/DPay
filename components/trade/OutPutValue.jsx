@@ -56,7 +56,7 @@ export default function OutPutValue({ defaultValue, onChange }) {
           type="number"
           className="w-full mt-3 bg-transparent py-2 px-2 rounded-md border border-[white!important] focus:outline-none"
           preset="amount"
-          placeholder={"lit/vB"}
+          placeholder={"shibe/vB"}
           defaultValue={inputVal}
           value={inputVal}
           autoFocus={true}

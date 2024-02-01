@@ -51,9 +51,18 @@ body {
 }
 .in-card {
   @apply rounded-lg p-3 bg-[#1c2741cf] cursor-pointer backdrop-blur-md shadow shadow-black/30 hover:bg-[#283657e0]  w-full duration-300;
-  border: 0.5px solid transparent!important;
+  border: 0.5px solid transparent !important;
 }
 
 .in-card:hover {
-  border: 0.5px solid rgba(255, 255, 255, 0.404)!important;
+  border: 0.5px solid rgba(255, 255, 255, 0.404) !important;
+}
+
+.fee-selected {
+  @apply rounded-lg bg-[#1c2741cf] cursor-pointer backdrop-blur-md shadow shadow-black/30 hover:bg-[#283657e0] duration-300;
+  border: 0.5px solid transparent !important;
+}
+
+.fee-selected:hover {
+  border: 0.5px solid rgba(255, 255, 255, 0.404) !important;
 }
