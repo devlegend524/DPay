@@ -27,7 +27,7 @@ export default function WalletOthers() {
     setOffset(e.selected * pageSize);
   };
 
-  const getDorginals = async (offset, pageSize, address) => {
+  const getDoginals = async (offset, pageSize, address) => {
     setFetchingData(true);
     try {
       const res = await openApi.getAddressInscriptions(
@@ -72,7 +72,7 @@ export default function WalletOthers() {
   useEffect(() => {
     if (address) {
       if (type === "dorginals") {
-        getDorginals(offset, pageSize, address);
+        getDoginals(offset, pageSize, address);
       } else if (type === "drc20") {
         getLtc20(offset, pageSize, address);
       } else {

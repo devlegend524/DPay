@@ -25,6 +25,7 @@ export default function WalletSend({ setContentType }) {
   const [feeRate, setFeeRate] = useState(5);
   const [autoAdjust, setAutoAdjust] = useState(false);
   const [error, setError] = useState("");
+  const [craetingTx, setCreatingTx] = useState(false);
   const [rawTxInfo, setRawTxInfo] = useState();
 
   // address Input
@@ -123,11 +124,13 @@ export default function WalletSend({ setContentType }) {
       //Prevent repeated triggering caused by setAmount
       return;
     }
+    setCreatingTx(true);
 
     wallet
       .createBitcoinTx(toInfo, toSatoshis, feeRate, autoAdjust)
       .then((data) => {
         setRawTxInfo(data);
+        setCreatingTx(false);
         dispatch(
           bitcoinTx({
             toInfo: toInfo,
@@ -138,6 +141,7 @@ export default function WalletSend({ setContentType }) {
         );
       })
       .catch((e) => {
+        setCreatingTx(false);
         setError(e.message);
       });
   }, [toInfo, inputAmount, autoAdjust, feeRate]);
@@ -236,21 +240,28 @@ export default function WalletSend({ setContentType }) {
         />
 
         <button
-          className="mt-3 w-full main_btn py-2.5 rounded-lg"
+          className="mt-3 w-full main_btn py-2.5 rounded-lg flex justify-center items-center gap-2"
           disabled={
             error ||
             formatError ||
             parseError ||
             !Number(inputAmount) ||
-            !balance
+            !balance ||
+            !rawTxInfo
           }
           onClick={() => pushBitcoinTx()}
         >
-          Send
+          {craetingTx ? (
+            <>
+              <ImSpinner10 className="animate-spin" /> Creating Tx
+            </>
+          ) : (
+            <>Send</>
+          )}
         </button>
         {pendingTx && (
           <div className="absolute w-full h-full rounded-lg flex justify-center items-center bg-[#12273da7] top-0 left-0">
-            <ImSpinner10  className="text-3xl animate-spin" />
+            <ImSpinner10 className="text-3xl animate-spin" />
           </div>
         )}
 

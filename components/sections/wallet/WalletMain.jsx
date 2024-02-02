@@ -127,7 +127,7 @@ export default function WalletMain({ setContentType }) {
             className="py-1 rounded-lg cursoer-pointer focus:outline-none"
             onClick={() => setListType("dorginals")}
           >
-            Dorginals
+            Doginals
           </button>
           <button
             className="py-1 rounded-lg cursoer-pointer focus:outline-none"
@@ -148,13 +148,13 @@ export default function WalletMain({ setContentType }) {
             <>
               {inscriptions?.total > 0 ? (
                 <>
-                  <div className="mt-3">All Dorginals</div>
+                  <div className="mt-3">All Doginals</div>
                   <Link
                     href={"/wallet/" + account?.accounts[0]?.address}
                     className="rounded-md bg-primary-dark/20 in-card py-3 dark:hover:text-white px-3 flex justify-between items-center hover:bg-primary-dark/30  transition ease-in-out cursor-pointer mt-2 mb-3"
                   >
                     <div className="flex gap-2 items-center">
-                      <p>Dorginals</p>
+                      <p>Doginals</p>
                     </div>
                     <div className="flex gap-3">
                       <p>{inscriptions?.total}</p>

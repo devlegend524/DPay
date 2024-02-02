@@ -22,7 +22,7 @@ export default function Tabs({ type, setType }) {
           }`}
           onClick={() => setType("dorginals")}
         >
-          Dorginals
+          Doginals
         </button>
         <button
           className={`py-2 sm:w-24 h-full w-full focus:outline-none text-center cursor-pointer text-sm  rounded-md ${
