@@ -178,43 +178,45 @@ export default function WalletOthers() {
         />
       </Head>
 
-      <Banner address={address} />
+      <div className="container-fluid mx-auto max-w-[1600px]">
+        <Banner address={address} />
 
-      <Tabs setType={setType} type={type} />
+        <Tabs setType={setType} type={type} />
 
-      {fetchingData ? (
-        <>
-          <div className="flex justify-center items-center h-[200px] mb-16">
-            <ImSpinner10 className="text-3xl animate-spin" />
-          </div>
-        </>
-      ) : (
-        <>
-          {total > 0 ? (
-            <>
-              <div className="my-8">{renderIterms(type)}</div>
+        {fetchingData ? (
+          <>
+            <div className="flex justify-center items-center h-[200px] mb-16">
+              <ImSpinner10 className="text-3xl animate-spin" />
+            </div>
+          </>
+        ) : (
+          <>
+            {total > 0 ? (
+              <>
+                <div className="my-8">{renderIterms(type)}</div>
 
-              <ReactPaginate
-                breakLabel="..."
-                nextLabel=">"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={2}
-                marginPagesDisplayed={1}
-                pageCount={total / pageSize}
-                previousLabel="<"
-                renderOnZeroPageCount={null}
-                className="pagination"
-              />
-            </>
-          ) : (
-            <>
-              <div className="flex justify-center items-center h-[200px] mb-16">
-                No Data. {":("}
-              </div>
-            </>
-          )}
-        </>
-      )}
+                <ReactPaginate
+                  breakLabel="..."
+                  nextLabel=">"
+                  onPageChange={handlePageClick}
+                  pageRangeDisplayed={2}
+                  marginPagesDisplayed={1}
+                  pageCount={total / pageSize}
+                  previousLabel="<"
+                  renderOnZeroPageCount={null}
+                  className="pagination"
+                />
+              </>
+            ) : (
+              <>
+                <div className="flex justify-center items-center h-[200px] mb-16">
+                  No Data. {":("}
+                </div>
+              </>
+            )}
+          </>
+        )}
+      </div>
     </Layout>
   );
 }
