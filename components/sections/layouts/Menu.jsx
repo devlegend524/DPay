@@ -27,7 +27,7 @@ export default function MenuBar() {
           : "bg-transparent py-1"
       }`}
     >
-      <div className="container-fluid mx-auto  flex justify-between items-center">
+      <div className="container-fluid mx-auto  flex justify-between items-center px-[0px!important] sm:px-[12px!important]">
         <Link className="logo ps-0" href="/">
           <img
             src="/logo.png"

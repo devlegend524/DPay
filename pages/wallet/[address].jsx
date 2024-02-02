@@ -157,12 +157,12 @@ export default function WalletOthers() {
       );
     } else if (type === "lists") {
       return (
-        <div className="flex justify-center items-center h-[200px] mb-16">
+        <div className="flex justify-center items-center h-[200px]">
           Coming Soon.
         </div>
       );
     } else if (type === "history") {
-      <div className="flex justify-center items-center h-[200px] mb-16">
+      <div className="flex justify-center items-center h-[200px]">
         Coming Soon.
       </div>;
     }
@@ -185,7 +185,7 @@ export default function WalletOthers() {
 
         {fetchingData ? (
           <>
-            <div className="flex justify-center items-center h-[200px] mb-16">
+            <div className="flex justify-center items-center h-[200px]">
               <ImSpinner10 className="text-3xl animate-spin" />
             </div>
           </>
@@ -209,7 +209,7 @@ export default function WalletOthers() {
               </>
             ) : (
               <>
-                <div className="flex justify-center items-center h-[200px] mb-16">
+                <div className="flex justify-center items-center h-[200px]">
                   No Data. {":("}
                 </div>
               </>

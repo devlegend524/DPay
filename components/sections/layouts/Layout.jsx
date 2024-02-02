@@ -40,7 +40,7 @@ export default function Layout(props) {
 
       <div className="flex items-center flex-col min-h-screen py-[90px] relative w-full overflow-hidden">
         <MenuBar />
-        {props.children}
+        <div className="mb-16">{props.children}</div>
         <Footer />
         <FixedLeftBar />
       </div>
