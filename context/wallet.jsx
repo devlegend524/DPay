@@ -156,13 +156,13 @@ const Wallet = (props) => {
         const inscriptions = await openApi.getAddressInscriptions(
           accountInfo?.account?.accounts[0]?.address,
           0,
-          10000
+          20
         );
 
         const ltc20 = await openApi.getAddressTokenBalances(
           accountInfo?.account?.accounts[0]?.address,
           0,
-          1000
+          20
         );
 
         dispatch(
@@ -357,7 +357,7 @@ const Wallet = (props) => {
       receiverToPayFee,
       pubkey: currentAccount.pubkey,
       feeRate,
-      enableRBF: true,
+      enableRBF: false,
     });
     console.log("finialized3333");
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -683,7 +683,6 @@ const Wallet = (props) => {
 
   const pushTx = async (rawTxInfo) => {
     const txid = await openApi.pushTx(rawTxInfo);
-    fetchbalance();
     return txid;
   };
 

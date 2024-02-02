@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WalletWelcome({ setType }) {
   return (
-    <div className="p-4 rounded-lg  dark:bg-slate-900 border border-gray-600 bg-white">
+    <div className="p-4 rounded-lg  dark:bg-slate-900 cs-border bg-white">
       <p className="my-8 font-semibold text-center text-2xl">Dpay Wallet</p>
 
       <p className="text-center">

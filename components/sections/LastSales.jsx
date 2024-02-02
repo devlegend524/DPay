@@ -86,7 +86,7 @@ export default function LastSales({ slug, lastSales, price, isLTC20 }) {
                   <div className="flex justify-between gap-1 text-sm">
                     <p>Tx:</p>
                     <a
-                      href={"https://sochain.com/tx/" + sale?.tx}
+                    href={"https://sochain.com/tx/DOGE/"+ sale?.tx}
                       className="cursor-pointer text-sky-500"
                       target={"_blank"}
                     >

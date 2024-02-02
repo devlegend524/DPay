@@ -23,7 +23,7 @@ export default function WalletSecret({ setContentType }) {
 
   if (isSuccess) {
     return (
-      <div className="p-4 rounded-lg  dark:bg-slate-900 border border-gray-600 bg-white">
+      <div className="p-4 rounded-lg  dark:bg-slate-900 cs-border bg-white">
         <button
           className=" focus:outline-none"
           onClick={() => setContentType("main")}
@@ -34,7 +34,7 @@ export default function WalletSecret({ setContentType }) {
           Your mnemonic phrase:
         </label>
         <div
-          className="p-3 rounded-lg bg-primary-dark/20  mt-1 relative cursor-pointer hover:bg-primary-dark/30  duration-300"
+          className="p-3 rounded-lg dark:bg-slate-400/20  mt-1 relative cursor-pointer hover:bg-gray-300/30  duration-300"
           onClick={() => {
             copyToClipboard(accountInfo?.keyrings?.mnemonic);
             copiedf();

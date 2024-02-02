@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { WalletContext } from "@/context/wallet";
 import { useMemo } from "react";
 import { FaArrowLeft, FaList } from "react-icons/fa";
-import { AiOutlineLoading } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import ReactPaginate from "react-paginate";
 import { toast } from "react-hot-toast";
 import Ltc20tokenCard from "../../../components/UI/ltc20tokenCard";
@@ -81,10 +81,7 @@ export default function LTC20Token() {
 
   const getTokenSummary = async (address, ticker) => {
     try {
-      const res = await openApi.getAddressTokenSummary(
-        address,
-        ticker
-      );
+      const res = await openApi.getAddressTokenSummary(address, ticker);
       setTokenSummary(res);
     } catch (error) {
       console.log(error);
@@ -150,7 +147,7 @@ export default function LTC20Token() {
 
       <h1 className="text-3xl font-semibold my-16 text-center">My Wallet</h1>
 
-      {!bulkSelect ? (
+      {/* {!bulkSelect ? (
         <button
           className="main_btn px-2 py-1 rounded-md sm:hidden inline-block mb-1"
           onClick={() => setBulkSelect(true)}
@@ -164,12 +161,12 @@ export default function LTC20Token() {
         >
           <MdCancel /> Cancel
         </button>
-      )}
+      )} */}
 
       <div className="flex justify-center sm:justify-between w-full">
         <Tabs type={"ltc20"} loading={false} />
 
-        {!bulkSelect ? (
+        {/* {!bulkSelect ? (
           <button
             className="main_btn px-2 py-1 rounded-md hidden sm:inline-block"
             onClick={() => setBulkSelect(true)}
@@ -183,7 +180,7 @@ export default function LTC20Token() {
           >
             <MdCancel /> Cancel
           </button>
-        )}
+        )} */}
       </div>
 
       <div className="flex justify-between w-full gap-2 items-center">
@@ -206,7 +203,7 @@ export default function LTC20Token() {
 
       {fetchingData ? (
         <div className="my-auto flex  justify-center gap-2 items-center">
-          <AiOutlineLoading className="text-3xl animate-spin" />
+          <ImSpinner10  className="text-3xl animate-spin" />
         </div>
       ) : (
         <>

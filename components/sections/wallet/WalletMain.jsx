@@ -12,10 +12,7 @@ import { addressFormat } from "@/utils";
 import Image from "next/image";
 import { useEffect } from "react";
 import Link from "next/link";
-import { LuAlertOctagon } from "react-icons/lu";
-import Modal from "react-modal";
 import { useWallet } from "@/store/hooks";
-import useActivities from "@/hooks/useActivities";
 import { useRouter } from "next/router";
 
 export default function WalletMain({ setContentType }) {
@@ -24,24 +21,15 @@ export default function WalletMain({ setContentType }) {
   const router = useRouter();
   const [listType, setListType] = useState("dorginals");
   const [pending, setPending] = useState(true);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [lists, setLists] = useState();
   const [fetchingLists, setFetchingLists] = useState(true);
 
-  const goToDetails = (ticker) => {
-    router.push("/wallet/ltc20Token/" + ticker);
+  const goToDetails = () => {
+    router.push("/wallet/" + account?.accounts[0]?.address);
   };
 
   const copied = () => {
     toast.success("copied!");
-  };
-
-  const confirm = () => {
-    wallet.removeWallet();
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
   };
 
   const fetchData = () => {
@@ -58,7 +46,7 @@ export default function WalletMain({ setContentType }) {
 
   return (
     <>
-      <div className="p-4 rounded-lg dark:bg-slate-900 border border-gray-600 bg-white">
+      <div className="p-4 rounded-lg dark:bg-slate-900 cs-border bg-white">
         <div className="flex justify-between items-center">
           <div
             className="flex items-center gap-2 cursor-pointer rounded-lg"
@@ -71,6 +59,7 @@ export default function WalletMain({ setContentType }) {
               addressFormat(account?.accounts[0]?.address, 5)}
             <FaCopy />
           </div>
+
           <div className="flex gap-3">
             {!pending ? (
               <FaArrowsRotate
@@ -117,7 +106,7 @@ export default function WalletMain({ setContentType }) {
                     Show secrets
                   </button>
                   <button
-                    onClick={() => setModalIsOpen(true)}
+                    onClick={() => wallet.removeWallet()}
                     className="hover:bg-primary-dark/30 transition ease-in-out rounded-md focus:outline-none text-left w-full text-red-600 p-1"
                   >
                     Delete Wallet
@@ -127,6 +116,7 @@ export default function WalletMain({ setContentType }) {
             </Menu>
           </div>
         </div>
+
         <div className="mt-3">
           {balance ? Number(balance).toFixed(2) : "0"} ( $
           {balance ? (balance * price).toFixed(2) : "0.00"} )
@@ -153,15 +143,15 @@ export default function WalletMain({ setContentType }) {
           </button>
         </div>
 
-        <div className=" overflow-y-auto h-[150px]">
+        <div className="overflow-y-auto h-[150px]">
           {listType == "dorginals" ? (
             <>
               {inscriptions?.total > 0 ? (
                 <>
                   <div className="mt-3">All Dorginals</div>
                   <Link
-                    href="/"
-                    className="rounded-md bg-primary-dark/20 in-card py-3 hover:text-white px-3 flex justify-between items-center hover:bg-primary-dark/30  transition ease-in-out cursor-pointer mt-2 mb-3"
+                    href={"/wallet/" + account?.accounts[0]?.address}
+                    className="rounded-md bg-primary-dark/20 in-card py-3 dark:hover:text-white px-3 flex justify-between items-center hover:bg-primary-dark/30  transition ease-in-out cursor-pointer mt-2 mb-3"
                   >
                     <div className="flex gap-2 items-center">
                       <p>Dorginals</p>
@@ -261,7 +251,7 @@ export default function WalletMain({ setContentType }) {
                             <hr className="cs-border" />
                             <div className="flex gap-1 justify-between text-[11px]">
                               <p>overall</p>
-                              <p>{list.overallBalane}</p>
+                              <p>{list.overallBalance}</p>
                             </div>
                           </div>
                         );
@@ -278,30 +268,6 @@ export default function WalletMain({ setContentType }) {
           )}
         </div>
       </div>
-
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-        className="cs-modal relative"
-      >
-        <div className="text-center text-2xl font-semibold">
-          Are you sure to delete this wallet?
-        </div>
-
-        <div className="flex justify-center items-center p-3 my-8">
-          <LuAlertOctagon className="text-9xl text-yellow-500" />
-        </div>
-
-        <div className="flex gap-2">
-          <button className="main_btn h-8 w-full " onClick={closeModal}>
-            No
-          </button>
-          <button className="main_btn h-8 w-full bg-red-500" onClick={confirm}>
-            Yes
-          </button>
-        </div>
-      </Modal>
     </>
   );
 }

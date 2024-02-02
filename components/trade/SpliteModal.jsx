@@ -6,7 +6,8 @@ import { FaScissors } from "react-icons/fa6";
 import { useContext } from "react";
 import { WalletContext } from "@/context/wallet";
 import { toast } from "react-hot-toast";
-import { AiFillCheckCircle, AiOutlineLoading } from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import { useEffect } from "react";
 import OutputValueBar from "@/components/UI/OutputValueBar";
 import { MdOutlineCancel } from "react-icons/md";
@@ -196,7 +197,7 @@ export default function SpliteModal({
 
       {pendingTx && (
         <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 flex justify-center items-center">
-          <AiOutlineLoading className="text-3xl font-semibold animate-spin" />
+          <ImSpinner10  className="text-3xl font-semibold animate-spin" />
         </div>
       )}
 
@@ -206,7 +207,7 @@ export default function SpliteModal({
             <div>
               <AiFillCheckCircle className="text-6xl font-semibold mx-auto text-green-600" />
               <a
-                href={"https://sochain.com/tx/" + txId}
+              href={"https://sochain.com/tx/DOGE/"+ txId}
                 className="underline"
                 target="_blank"
               >

@@ -10,9 +10,11 @@ import { FaList } from "react-icons/fa";
 import BulkListModal from "@/components/trade/BulkListModal";
 import { toast } from "react-hot-toast";
 import Tabs from "@/components/UI/Tabs";
+import InscriptionCard from "@/components/UI/InscriptionCard";
+import InscriptionCardSkelenton from "@/components/UI/InscriptionCardSkelenton";
 import Head from "next/head";
-import Others from "@/components/sections/Others";
 import { useLastBlock } from "@/store/hooks";
+import ReactPaginate from "react-paginate";
 
 export default function WalletOthers() {
   const wallet = useContext(WalletContext);
@@ -24,11 +26,16 @@ export default function WalletOthers() {
   const [selectedBlocks, setSelectedBlocks] = useState([]);
   const [bulkSelect, setBulkSelect] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [offset, setOffset] = useState(0);
   let pushing = false;
 
   const cancelBlocks = () => {
     setSelectedBlocks([]);
     setBulkSelect(false);
+  };
+
+  const handlePageClick = (e) => {
+    setOffset(e.selected);
   };
 
   const saveInscriptionToDB = async (data) => {
@@ -129,10 +136,8 @@ export default function WalletOthers() {
         />
       </Head>
 
-      <h1 className="text-3xl font-semibold my-16 text-center">
-        My Wallet
-      </h1>
-
+      <h1 className="text-3xl font-semibold my-16 text-center">My Wallet</h1>
+      {/* 
       {!bulkSelect ? (
         <button
           className="main_btn px-2 py-1 rounded-md sm:hidden inline-block mb-1"
@@ -147,12 +152,12 @@ export default function WalletOthers() {
         >
           <MdCancel /> Cancel
         </button>
-      )}
+      )} */}
 
       <div className="flex justify-center sm:justify-between w-full">
         <Tabs type={"others"} loading={fetchingData} />
 
-        {!bulkSelect ? (
+        {/* {!bulkSelect ? (
           <button
             className="main_btn px-2 py-1 rounded-md hidden sm:inline-block"
             onClick={() => setBulkSelect(true)}
@@ -166,17 +171,66 @@ export default function WalletOthers() {
           >
             <MdCancel /> Cancel
           </button>
-        )}
+        )} */}
       </div>
 
-      <Others
-        inscriptionsFromDB={inscriptionsFromDB}
-        loading={fetchingData}
-        bulkSelect={bulkSelect}
-        setSelectedBlocks={setSelectedBlocks}
-        selectedBlocks={selectedBlocks}
-        lastBlock={lastBlock}
-      />
+      <div className={`container ${!inscriptionsFromDB && "my-auto"}`}>
+        <div className="my-2">
+          {fetchingData ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-8 w-full">
+              {Array.from({ length: 10 }, (_, key) => {
+                return <InscriptionCardSkelenton key={key} />;
+              })}
+            </div>
+          ) : (
+            <>
+              {inscriptionsFromDB ? (
+                <>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-8 w-full">
+                    {inscriptionsFromDB &&
+                      inscriptionsFromDB
+                        .slice(offset * 10, offset * 10 + 10)
+                        .map((inscription, key) => {
+                          return (
+                            <InscriptionCard
+                              inscription={inscription}
+                              key={inscription?.inscriptionId + "others"}
+                              inscriptionIndex={key + offset * 10}
+                              bulkSelect={bulkSelect}
+                              tag="others"
+                              setSelectedBlocks={setSelectedBlocks}
+                              selectedBlocks={selectedBlocks}
+                              isNFT={false}
+                              lastBlock={lastBlock}
+                            />
+                          );
+                        })}
+                  </div>
+                  <ReactPaginate
+                    breakLabel="..."
+                    nextLabel=">"
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={2}
+                    marginPagesDisplayed={1}
+                    pageCount={Math.ceil(
+                      Object.keys(inscriptionsFromDB).length / 10
+                    )}
+                    previousLabel="<"
+                    renderOnZeroPageCount={null}
+                    className="pagination"
+                  />
+                </>
+              ) : (
+                <div className="flex flex-col justify-center items-center h-full mt-16">
+                  <h1 className="text-xl font-bold mb-8 animate-pulse text-center">
+                    You don not have any NFTs.
+                  </h1>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
 
       <div
         className={`fixed z-50  left-1/2 border border-transparent ${

@@ -1,32 +1,27 @@
 import React, { useContext, useEffect, useMemo } from "react";
 import { BsArrowLeft } from "react-icons/bs";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toast } from "react-hot-toast";
 import { WalletContext } from "@/context/wallet";
 import { useState } from "react";
 import { FeeRateBar } from "./WalletFeeRate";
-import { amountToSatoshis, isValidAddress, satoshisToAmount } from "@/utils";
+import { amountToSatoshis, isValidAddress } from "@/utils";
 import { bitcoinTx, updateBitcoinTx } from "@/store/slices/wallet";
 import WAValidator from "multicoin-address-validator";
-import { sleep } from "@/utils";
-import { AiFillCheckCircle, AiOutlineLoading } from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import { useWallet } from "@/store/hooks";
 import { API_STATUS } from "@/shared/constant";
 
-const SATS_DOMAIN = ".lits";
-const UNISAT_DOMAIN = ".unilit";
-const LTC_DOMAIN = ".ltc";
-const LITE_DOMAIN = ".lite";
 const COIN_DUST = 1000;
 
 export default function WalletSend({ setContentType }) {
   const dispatch = useDispatch();
   const { balance } = useWallet();
   const wallet = useContext(WalletContext);
+  const address = wallet.getAddress();
   const [step, setStep] = useState(0);
   const [inputAmount, setAmount] = useState("");
-  const [isValid, setIsValid] = useState(false);
-  const [isValidAmount, setIsValidAmount] = useState(false);
   const [feeRate, setFeeRate] = useState(5);
   const [autoAdjust, setAutoAdjust] = useState(false);
   const [error, setError] = useState("");
@@ -50,7 +45,6 @@ export default function WalletSend({ setContentType }) {
   const [inscription, setInscription] = useState();
   const [pendingTx, setPendingTx] = useState(false);
   const [succeed, setSucceed] = useState(false);
-  const [txid, setTxId] = useState();
 
   // address Input
 
@@ -89,41 +83,12 @@ export default function WalletSend({ setContentType }) {
       setValidAddress("");
     }
 
-    // const teststr = inputAddress.toLowerCase();
-    // if (
-    //   teststr.endsWith(SATS_DOMAIN) ||
-    //   teststr.endsWith(UNISAT_DOMAIN) ||
-    //   teststr.endsWith(LTC_DOMAIN) ||
-    //   teststr.endsWith(LITE_DOMAIN)
-    // ) {
-    //   wallet
-    //     .queryDomainInfo(encodeURIComponent(inputAddress))
-    //     .then((inscription) => {
-    //       if (inscription) {
-    //         setInscription(inscription);
-    //         const address = inscription.address || "";
-    //         setParseAddress(address);
-    //         setValidAddress(address);
-    //       } else {
-    //         setParseError(`${inputAddress} does not exist`);
-    //       }
-    //     })
-    //     .catch((err) => {
-    //       const errMsg = err.message + " for " + inputAddress;
-    //       setFormatError(errMsg);
-    //     });
-    // } else {
     const isValid = WAValidator.validate(inputAddress, "dogecoin");
     if (!isValid) {
       setFormatError("Recipient address is invalid");
       return;
     }
     setValidAddress(inputAddress);
-    // }
-  };
-
-  const addressAmount = async () => {
-    setIsValidAmount(balance > amount);
   };
 
   const toSatoshis = useMemo(() => {
@@ -148,7 +113,6 @@ export default function WalletSend({ setContentType }) {
     if (feeRate <= 0) {
       return;
     }
-    console.log(feeRate);
 
     if (
       toInfo.address == bitcoinTx.toAddress &&
@@ -163,11 +127,6 @@ export default function WalletSend({ setContentType }) {
     wallet
       .createBitcoinTx(toInfo, toSatoshis, feeRate, autoAdjust)
       .then((data) => {
-        //  console.log(data);
-        // if (data.fee < data.estimateFee) {
-        //   setError(`Network fee must be at leat ${data.estimateFee}`);
-        //   return;
-        // }
         setRawTxInfo(data);
         dispatch(
           bitcoinTx({
@@ -179,7 +138,6 @@ export default function WalletSend({ setContentType }) {
         );
       })
       .catch((e) => {
-        //  console.log(e);
         setError(e.message);
       });
   }, [toInfo, inputAmount, autoAdjust, feeRate]);
@@ -197,7 +155,6 @@ export default function WalletSend({ setContentType }) {
     }
 
     const decodedPsbt = await wallet.decodePsbt(rawTxInfo.psbtHex);
-    console.log(decodedPsbt)
 
     if (decodedPsbt.warning) {
       toast.error("RawTx decoding is failed");
@@ -212,12 +169,10 @@ export default function WalletSend({ setContentType }) {
         dispatch(updateBitcoinTx(res.result));
         toast.success(`Sent ${inputAmount} successfully.`);
         setSucceed(true);
-        setTxId(res.result);
       }
       setPendingTx(false);
     } catch (e) {
       setPendingTx(false);
-      //  console.log(e);
     }
 
     return ret;
@@ -225,7 +180,7 @@ export default function WalletSend({ setContentType }) {
 
   if (step === 0) {
     return (
-      <div className="p-4 rounded-lg  dark:bg-slate-900 border border-gray-600 bg-white relative">
+      <div className="p-4 rounded-lg  dark:bg-slate-900 cs-border bg-white relative">
         <button
           className=" focus:outline-none"
           onClick={() => setContentType("main")}
@@ -295,7 +250,7 @@ export default function WalletSend({ setContentType }) {
         </button>
         {pendingTx && (
           <div className="absolute w-full h-full rounded-lg flex justify-center items-center bg-[#12273da7] top-0 left-0">
-            <AiOutlineLoading className="text-3xl animate-spin" />
+            <ImSpinner10  className="text-3xl animate-spin" />
           </div>
         )}
 
@@ -305,7 +260,7 @@ export default function WalletSend({ setContentType }) {
               <div className="mb-16">
                 <AiFillCheckCircle className="text-8xl font-semibold mx-auto text-green-600" />
                 <a
-                  href={"https://sochain.com/tx/" + txid}
+                  href={"https://dogechain.info/address/" + address}
                   className="underline"
                   target="_blank"
                 >
@@ -313,13 +268,10 @@ export default function WalletSend({ setContentType }) {
                 </a>
               </div>
             </div>
-            {/* <MdOutlineCancel
-              className="absolute top-2 right-2 text-3xl cursor-pointer"
-              // onClick={closeModal}
-            /> */}
+
             <button
               className="w-full main_btn py-2 rounded-md"
-              onClick={() => setContentType(4)}
+              onClick={() => setContentType("main")}
             >
               Done
             </button>

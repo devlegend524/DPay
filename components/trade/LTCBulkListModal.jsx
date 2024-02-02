@@ -20,7 +20,7 @@ import {
   get,
 } from "firebase/database";
 import { db } from "@/services/firebase";
-import { AiOutlineLoading } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import { FaTimes } from "react-icons/fa";
 import { Psbt } from "bitcoinjs-lib";
 import useActivities from "@/hooks/useActivities";
@@ -363,7 +363,7 @@ export default function LTCBulkListModal({
 
       {pendingTx && (
         <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 flex justify-center items-center">
-          <AiOutlineLoading className="text-3xl font-semibold animate-spin" />
+          <ImSpinner10  className="text-3xl font-semibold animate-spin" />
         </div>
       )}
     </Modal>

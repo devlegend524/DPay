@@ -2,7 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { AiFillCheckCircle, AiOutlineLoading } from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import Modal from "react-modal";
 import { WalletContext } from "@/context/wallet";
 import FeeRecommend from "@/components/UI/FeeRecommend";
@@ -158,7 +159,7 @@ export default function TransferModal({
         </button>
         {checking ? (
           <button className="main_btn w-full py-2 px-3 rounded-md mt-3 bg-sky-600">
-            <AiOutlineLoading className="text-lg font-semibold animate-spin mx-auto" />
+            <ImSpinner10  className="text-lg font-semibold animate-spin mx-auto" />
           </button>
         ) : (
           <>
@@ -180,7 +181,7 @@ export default function TransferModal({
               >
                 {creatingTx ? (
                   <>
-                    <AiOutlineLoading className="text-lg font-semibold animate-spin mx-auto" />
+                    <ImSpinner10  className="text-lg font-semibold animate-spin mx-auto" />
                   </>
                 ) : (
                   "Sign & Pay"
@@ -193,7 +194,7 @@ export default function TransferModal({
 
       {pending && (
         <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 flex justify-center items-center">
-          <AiOutlineLoading className="text-3xl font-semibold animate-spin" />
+          <ImSpinner10  className="text-3xl font-semibold animate-spin" />
         </div>
       )}
 
@@ -202,7 +203,7 @@ export default function TransferModal({
           <div>
             <AiFillCheckCircle className="text-6xl font-semibold mx-auto text-green-600" />
             <a
-              href={"https://sochain.com/tx/" + tx}
+            href={"https://sochain.com/tx/DOGE/"+ tx}
               className="underline"
               target="_blank"
             >

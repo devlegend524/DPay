@@ -1,5 +1,4 @@
 import Layout from "@/components/sections/layouts/Layout";
-import BulkListModal from "@/components/trade/BulkListModal";
 import Tabs from "@/components/UI/Tabs";
 import History from "@/components/sections/History";
 import Head from "next/head";
@@ -19,7 +18,7 @@ export default function WalletHistory() {
         My Wallet
       </h1>
 
-      <div className="flex justify-center sm:justify-between w-full">
+      <div className="flex justify-center sm:justify-between w-full container mx-auto">
         <Tabs type={"history"} loading={false} />
       </div>
 

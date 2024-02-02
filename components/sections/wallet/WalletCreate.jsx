@@ -136,7 +136,7 @@ export default function WalletCreate({ setType, isImport }) {
     return (
       <>
         {created ? (
-          <div className="p-4 rounded-lg  dark:bg-slate-900 border border-gray-600 bg-white">
+          <div className="p-4 rounded-lg  dark:bg-slate-900 cs-border bg-white">
             <p className="my-8 font-semibold text-center text-2xl">
               Secret Recovery Phrase
             </p>
@@ -159,7 +159,7 @@ export default function WalletCreate({ setType, isImport }) {
             </div>
           </div>
         ) : (
-          <div className="p-4 rounded-lg  dark:bg-slate-900 border border-gray-600 bg-white">
+          <div className="p-4 rounded-lg  dark:bg-slate-900 cs-border bg-white">
             <p className="my-8 font-semibold text-center text-2xl">
               Set Your wallet password
             </p>
@@ -211,7 +211,7 @@ export default function WalletCreate({ setType, isImport }) {
     );
   } else {
     return (
-      <div className="p-4 rounded-lg  dark:bg-slate-900 border border-gray-600 bg-white">
+      <div className="p-4 rounded-lg  dark:bg-slate-900 cs-border bg-white">
         <p className="my-8 font-semibold text-center text-2xl">
           Set Your wallet password
         </p>

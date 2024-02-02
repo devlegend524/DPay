@@ -2,13 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 2.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f179;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #213041c2;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3d426f;
+}
+
 body {
   @apply bg-white text-base text-black dark:text-white dark:bg-slate-900;
   overflow-x: hidden !important;
 }
 
 .main_btn {
-  @apply bg-red-600;
+  @apply bg-red-600 text-white;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -50,7 +72,7 @@ body {
   transition: 50ms linear;
 }
 .in-card {
-  @apply rounded-lg p-3 bg-[#1c2741cf] cursor-pointer backdrop-blur-md shadow shadow-black/30 hover:bg-[#283657e0]  w-full duration-300;
+  @apply rounded-lg p-3 dark:bg-[#1c2741cf] bg-gray-200 hover:bg-gray-100  cursor-pointer backdrop-blur-md shadow shadow-black/30 dark:hover:bg-[#283657e0] w-full duration-300;
   border: 0.5px solid transparent !important;
 }
 
@@ -65,4 +87,59 @@ body {
 
 .fee-selected:hover {
   border: 0.5px solid rgba(255, 255, 255, 0.404) !important;
+}
+
+.pagination {
+  display: flex;
+  margin: 20px;
+  justify-content: center;
+}
+
+.pagination li {
+  @apply main_btn sm:w-[40px] sm:h-[40px] w-[32px] h-[32px] text-[9px];
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination li a {
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.pagination li.break {
+  border: none;
+}
+
+.pagination li.selected {
+  @apply bg-[#ee6f5e];
+}
+
+.pagination li::before {
+  display: none !important;
+}
+
+.cs-border {
+  border: 0.1px solid rgba(209, 208, 208, 0.336) !important;
+}
+
+.banner {
+  @apply rounded-lg p-3 dark:bg-[#1c2741cf] bg-gray-200 backdrop-blur-md shadow shadow-black/30 w-full duration-300;
+  border: 0.5px solid transparent !important;
+}
+
+.in-content {
+  @apply dark:bg-[#22304fd4] bg-gray-300 relative  text-xl text-center  mb-3 flex items-center  justify-center font-semibold w-full h-[150px] lg:h-[180px] md:h-[170px] sm:h-[160px];
+}
+
+.in-transfer {
+  @apply absolute dark:bg-slate-700 bg-gray-300 px-3 border top-1 right-1 font-extralight text-sm rounded-sm;
+}
+
+.in-link {
+  @apply text-sm text-gray-300  flex justify-center;
 }

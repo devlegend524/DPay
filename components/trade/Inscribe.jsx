@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
-import { AiFillCheckCircle, AiOutlineLoading } from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import FeeRecommend from "@/components/UI/FeeRecommend";
 import { useContext } from "react";
 import { WalletContext } from "@/context/wallet";
@@ -176,7 +177,7 @@ export default function InscribeModal({
           onClick={handleInscribe}
         >
           {creatingTx ? (
-            <AiOutlineLoading className="text-lg font-semibold animate-spin" />
+            <ImSpinner10  className="text-lg font-semibold animate-spin" />
           ) : (
             <>
               <LuPenLine /> Inscribe
@@ -187,7 +188,7 @@ export default function InscribeModal({
 
       {pendingTx && (
         <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 flex justify-center items-center">
-          <AiOutlineLoading className="text-3xl font-semibold animate-spin" />
+          <ImSpinner10  className="text-3xl font-semibold animate-spin" />
         </div>
       )}
 
@@ -197,7 +198,7 @@ export default function InscribeModal({
             <div>
               <AiFillCheckCircle className="text-6xl font-semibold mx-auto text-green-600" />
               <a
-                href={"https://sochain.com/tx/" + tx}
+              href={"https://sochain.com/tx/DOGE/"+ tx}
                 className="underline"
                 target="_blank"
               >

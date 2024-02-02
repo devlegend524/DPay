@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import BuyModal from "../trade/BuyModal";
 import { ref, query, orderByChild, equalTo, onValue } from "firebase/database";
 import { db } from "@/services/firebase";
-import { AiOutlineLoading } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
@@ -148,7 +148,7 @@ export default function BuyCardForNFTs({
           <>
             {checkingListed ? (
               <button className="main_btn py-1 mt-1 rounded-md disabled:bg-primary-dark/10  w-full">
-                <AiOutlineLoading className="animate-spin m-auto my-1" />
+                <ImSpinner10  className="animate-spin m-auto my-1" />
               </button>
             ) : (
               <button

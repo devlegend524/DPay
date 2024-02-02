@@ -9,9 +9,9 @@ import { SiInstagram } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <div className="absolute bottom-0 left-0 w-full">
-      <footer className=" relative text-gray-800 dark:text-gray-200 w-full bg-gray-300 dark:bg-slate-800">
-        <div className="py-[30px] px-0 border-t dark:border-gray-600 border-gray-300">
+    <div className="absolute bottom-0 left-0 text-gray-800 dark:text-gray-200 w-full bg-gray-300 dark:bg-slate-800 border-t dark:border-gray-600 border-gray-300">
+      <footer className="relative container-fluid">
+        <div className="py-[30px] px-0">
           <div className="px-3 text-center">
             <div className="grid md:grid-cols-2 items-center gap-6">
               <div className="md:text-start text-center">
@@ -23,7 +23,8 @@ export default function Footer() {
                     target="_blank"
                     className="text-reset"
                   >
-                    {" "}  Austin
+                    {" "}
+                    Austin
                   </a>
                   .
                 </div>

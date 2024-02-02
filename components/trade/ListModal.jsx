@@ -20,7 +20,7 @@ import {
   get,
 } from "firebase/database";
 import { db } from "@/services/firebase";
-import { AiOutlineLoading } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import { Psbt } from "bitcoinjs-lib";
 import useActivities from "@/hooks/useActivities";
 import { FaScissors } from "react-icons/fa6";
@@ -333,7 +333,7 @@ export default function ListModal({
 
         {checking ? (
           <button className="main_btn w-full py-2 px-3 rounded-md mt-3 bg-sky-600">
-            <AiOutlineLoading className="text-lg font-semibold animate-spin mx-auto" />
+            <ImSpinner10  className="text-lg font-semibold animate-spin mx-auto" />
           </button>
         ) : (
           <>
@@ -361,7 +361,7 @@ export default function ListModal({
 
       {pendingTx && (
         <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 flex justify-center items-center">
-          <AiOutlineLoading className="text-3xl font-semibold animate-spin" />
+          <ImSpinner10  className="text-3xl font-semibold animate-spin" />
         </div>
       )}
     </Modal>

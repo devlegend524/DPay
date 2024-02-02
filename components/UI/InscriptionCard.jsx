@@ -17,7 +17,7 @@ import TransferModal from "../trade/TransferModal";
 import { addressFormat, validateInscription } from "@/utils";
 import { toast } from "react-hot-toast";
 import { WalletContext } from "@/context/wallet";
-import { AiOutlineLoading } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import { FaPlus } from "react-icons/fa";
 import { TbArticleOff } from "react-icons/tb";
 import { TbGiftOff } from "react-icons/tb";
@@ -298,49 +298,18 @@ export default function InscriptionCard({
   // if (tag === "dpay" && content.indexOf(".dpay") == -1) {
   //   return;
   // } else {
+  console.log(inscription);
   return (
     <div className="relative">
       <div
         className={`${added && "cs-border"} in-card`}
         onClick={() => goToDetails(inscription.inscriptionId)}
       >
-        <div className="in-content overflow-hidden">
-          {inscription?.contentType.indexOf("image") > -1 && (
-            <>
-              <img
-                key={inscription?.inscriptionId}
-                src={`https://ordinalslite.com/content/${inscription?.inscriptionId}`}
-                className="w-full h-full object-cover"
-                alt=""
-                onError={(e) => empyImage(e)}
-              />
-            </>
-          )}
-
-          {inscription?.contentType.indexOf("text") > -1 && (
-            <>
-              {content && (
-                <>
-                  {content.indexOf("tick") > -1 ? (
-                    <div
-                      className="text-lg font-bold px-3"
-                      key={inscription?.inscriptionId + "content"}
-                    >
-                      <p>{JSON.parse(content).tick}</p>
-                      <p>{JSON.parse(content).amt}</p>
-                    </div>
-                  ) : (
-                    <div
-                      className="text-lg font-bold px-3"
-                      key={inscription?.inscriptionId + "content"}
-                    >
-                      {content}
-                    </div>
-                  )}
-                </>
-              )}
-            </>
-          )}
+        <div className="in-content overflow-hidden bg-black">
+          <iframe
+            src={inscription.content}
+            className="w-full flex justify-center items-center"
+          />
 
           <button
             onClick={(e) => {
@@ -397,7 +366,7 @@ export default function InscriptionCard({
                   >
                     <>
                       {adding ? (
-                        <AiOutlineLoading className="text-lg text-white font-semibold animate-spin" />
+                        <ImSpinner10  className="text-lg text-white font-semibold animate-spin" />
                       ) : (
                         <>
                           <FaPlus />

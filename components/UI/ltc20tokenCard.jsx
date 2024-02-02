@@ -13,7 +13,7 @@ import {
 import { db } from "@/services/firebase";
 import { toast } from "react-hot-toast";
 import { WalletContext } from "@/context/wallet";
-import { AiOutlineLoading } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import { FaPlus } from "react-icons/fa";
 import { TbArticleOff } from "react-icons/tb";
 import { TbGiftOff } from "react-icons/tb";
@@ -272,7 +272,7 @@ export default function Ltc20tokenCard({
                   >
                     <>
                       {adding ? (
-                        <AiOutlineLoading className="text-lg text-white font-semibold animate-spin" />
+                        <ImSpinner10  className="text-lg text-white font-semibold animate-spin" />
                       ) : (
                         <>
                           <FaPlus />
@@ -294,7 +294,7 @@ export default function Ltc20tokenCard({
               >
                 <>
                   {checkingListed ? (
-                    <AiOutlineLoading className="text-lg text-white font-semibold animate-spin" />
+                    <ImSpinner10  className="text-lg text-white font-semibold animate-spin" />
                   ) : (
                     <>List</>
                   )}

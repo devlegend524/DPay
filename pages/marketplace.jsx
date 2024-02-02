@@ -2,12 +2,12 @@ import React from "react";
 import Head from "next/head";
 import Layout from "@/components/sections/layouts/Layout";
 
-const Inscribe = () => {
+const Market = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Inscribe</title>
-        <meta name="description" content="Dpay - Dpay inscribe" />
+        <title>Dpay - market</title>
+        <meta name="description" content="Dpay - Dpay market" />
       </Head>
 
       <div className="h-full flex flex-col items-center justify-center mt-32">
@@ -20,4 +20,4 @@ const Inscribe = () => {
   );
 };
 
-export default Inscribe;
+export default Market;

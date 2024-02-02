@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Layout from "@/components/sections/layouts/Layout";
 
-const Inscribe = () => {
+const Balances = () => {
   return (
     <Layout>
       <Head>
@@ -20,4 +20,4 @@ const Inscribe = () => {
   );
 };
 
-export default Inscribe;
+export default Balances;

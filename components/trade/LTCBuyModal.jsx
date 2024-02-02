@@ -22,7 +22,8 @@ import {
   remove,
 } from "firebase/database";
 import { db } from "@/services/firebase";
-import { AiFillCheckCircle, AiOutlineLoading } from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { ImSpinner10 } from "react-icons/im";
 import BuyBills from "./BuyBills";
 import { feeAddress, service_fee_rate } from "../../configs/constants";
 import { Psbt } from "bitcoinjs-lib";
@@ -455,7 +456,7 @@ export default function LTCBuyModal({
 
       {dummyTx && (
         <a
-          href={"https://sochain.com/tx/" + dummyTx}
+        href={"https://sochain.com/tx/DOGE/"+ dummyTx}
           target="_blank"
           className="underline mx-auto flex justify-center"
         >
@@ -482,7 +483,7 @@ export default function LTCBuyModal({
 
       {pendingTx && (
         <div className="absolute top-0 left-0 w-full h-full bg-primary-dark/60 flex justify-center items-center">
-          <AiOutlineLoading className="text-3xl font-semibold animate-spin" />
+          <ImSpinner10  className="text-3xl font-semibold animate-spin" />
         </div>
       )}
 
@@ -492,7 +493,7 @@ export default function LTCBuyModal({
             <div>
               <AiFillCheckCircle className="text-6xl font-semibold mx-auto text-green-600" />
               <a
-                href={"https://sochain.com/tx/" + buyTx}
+              href={"https://sochain.com/tx/DOGE/"+ buyTx}
                 className="underline"
                 target="_blank"
               >
