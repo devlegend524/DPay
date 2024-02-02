@@ -6,12 +6,14 @@ const Balances = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Inscribe</title>
+        <title>Dpay - Balances</title>
         <meta name="description" content="Dpay - Dpay inscribe" />
       </Head>
 
       <div className="h-full flex flex-col items-center justify-center mt-32">
-        <h1 className="text-5xl font-bold mb-8 animate-pulse">Coming Soon.</h1>
+        <h1 className="text-5xl font-bold mb-8 animate-pulse">
+          Balance - Coming Soon.
+        </h1>
         <p className="text-lg mb-8 text-center">
           We are working hard to give you something cool!
         </p>

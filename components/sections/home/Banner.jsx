@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <div className="container-fluid relative mt-8">
+    <div className="relative mt-8">
       <div className="grid grid-cols-1">
         <div className="slider relative overflow-hidden m-auto mb-4 before:content-[''] before:absolute before:top-0 before:start-0 before:z-2 after:content-[''] after:absolute after:top-0 after:end-0 after:z-2">
           <div className="slide-track flex items-center">

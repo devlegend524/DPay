@@ -11,7 +11,7 @@ const Inscribe = () => {
       </Head>
 
       <div className="h-full flex flex-col items-center justify-center mt-32">
-        <h1 className="text-5xl font-bold mb-8 animate-pulse">Coming Soon.</h1>
+        <h1 className="text-5xl font-bold mb-8 animate-pulse">Inscribe - Coming Soon.</h1>
         <p className="text-lg mb-8 text-center">
           We are working hard to give you something cool!
         </p>
