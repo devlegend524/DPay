@@ -26,11 +26,11 @@ export default function Layout(props) {
           property="og:description"
           content="Dpay: The Best ordinals market place on Dogecoin"
         />
-        <meta property="og:url" content="https://marketplace.ordinals.fun" />
+        <meta property="og:url" content="https://dpay-xi.vercel.app" />
         <meta property="og:site_name" content="ordinals.fun"></meta>
         <meta
           property="og:image"
-          content="https://marketplace.ordinals.fun/logo.png"
+          content="https://dpay-xi.vercel.app/logo.png"
         ></meta>
         <meta property="og:image:type" content="image/png"></meta>
         <meta property="og:image:width" content="2000"></meta>
@@ -40,7 +40,7 @@ export default function Layout(props) {
 
       <div className="flex items-center flex-col min-h-screen py-[90px] relative w-full overflow-hidden">
         <MenuBar />
-        <div className="mb-16">{props.children}</div>
+        <div className="mb-16 w-full">{props.children}</div>
         <Footer />
         <FixedLeftBar />
       </div>

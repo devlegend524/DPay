@@ -35,7 +35,7 @@ export default function WalletOthers() {
         offset,
         pageSize
       );
-
+      console.log(res);
       if (res.total > 0) {
         setTotal(res.total);
         setInscriptions(res.list);
@@ -90,6 +90,8 @@ export default function WalletOthers() {
       setPageSize(12);
     }
   }, [isMobile()]);
+
+  console.log(inscriptions);
 
   const renderIterms = (type) => {
     if (type === "dorginals") {
@@ -178,7 +180,7 @@ export default function WalletOthers() {
         />
       </Head>
 
-      <div className="container-fluid mx-auto max-w-[1600px]">
+      <div className="container-fluid mx-auto max-w-[1600px] w-full">
         <Banner address={address} />
 
         <Tabs setType={setType} type={type} />
