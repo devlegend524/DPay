@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 export default function Document() {
   return (
@@ -16,11 +15,11 @@ export default function Document() {
           property="og:description"
           content={`Dogecoin Ordinals marketplace | Buy & Sell Dogecoin inscriptions`}
         />
-        <meta property="og:url" content={`https://marketplace.ordinals.fun`} />
+        <meta property="og:url" content={`https://dpay-xi.vercel.app/`} />
         <meta property="og:site_name" content="Dpay"></meta>
         <meta
           property="og:image"
-          content="https://marketplace.ordinals.fun/metaImage.jpg"
+          content="https://dpay-xi.vercel.app/metaImage.jpg"
         ></meta>
         <meta property="og:image:type" content="image/jpg"></meta>
         <meta property="og:image:width" content="2000"></meta>
