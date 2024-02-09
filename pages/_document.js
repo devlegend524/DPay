@@ -15,11 +15,11 @@ export default function Document() {
           property="og:description"
           content={`Dogecoin Ordinals marketplace | Buy & Sell Dogecoin inscriptions`}
         />
-        <meta property="og:url" content={`https://dpay-xi.vercel.app/`} />
+        <meta property="og:url" content={`https://dpay-market.vercel.app/`} />
         <meta property="og:site_name" content="Dpay"></meta>
         <meta
           property="og:image"
-          content="https://dpay-xi.vercel.app/metaImage.jpg"
+          content="https://dpay-market.vercel.app/metaImage.jpg"
         ></meta>
         <meta property="og:image:type" content="image/jpg"></meta>
         <meta property="og:image:width" content="2000"></meta>
