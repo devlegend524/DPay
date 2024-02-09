@@ -52,7 +52,7 @@ function App({ Component, pageProps }) {
       <Script src="/assets/libs/tiny-slider/min/tiny-slider.js"></Script>
       <Script src="/assets/libs/feather-icons/feather.min.js"></Script>
       <Script src="/assets/js/plugins.init.js"></Script>
-      <Script src="/assets/js/app.js"></Script>
+      {/* <Script src="/assets/js/app.js"></Script> */}
     </>
   );
 }

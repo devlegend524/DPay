@@ -15,11 +15,11 @@ export default function Footer() {
           <div className="px-3 text-center">
             <div className="grid md:grid-cols-2 items-center gap-6">
               <div className="md:text-start text-center">
-                <div className="mb-0 flex">
+                <div className="mb-0 flex gap-1">
                   © 2024 Dpay. Design with{" "}
                   <i className="mdi mdi-heart text-red-600"></i> by{" "}
                   <a
-                    href="../../shreethemes_default.html"
+                    href="https://t.me/genius021120"
                     target="_blank"
                     className="text-reset"
                   >
@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
 
               <ul className="list-none md:text-end text-center gap-1 flex justify-end">
-                <li className="inline">
+                {/* <li className="inline">
                   <a
                     href="#"
                     target="_blank"
@@ -39,17 +39,17 @@ export default function Footer() {
                   >
                     <CiYoutube className="align-middle dark:text-white text-black" />
                   </a>
-                </li>
+                </li> */}
                 <li className="inline">
                   <a
-                    href="https://www.facebook.com/shreethemes"
+                    href="https://twitter.com/Dogepay_DRC20 X"
                     target="_blank"
                     className="btn btn-icon btn-sm border dark:border-gray-300 border-gray-600 rounded-md hover:border-red-600 dark:hover:border-red-600 hover:bg-red-600 dark:hover:bg-red-600"
                   >
                     <FaXTwitter className="align-middle dark:text-white text-black" />
                   </a>
                 </li>
-                <li className="inline">
+                {/* <li className="inline">
                   <a
                     href="/"
                     target="_blank"
@@ -57,11 +57,11 @@ export default function Footer() {
                   >
                     <SiInstagram className="align-middle dark:text-white text-black" />
                   </a>
-                </li>
+                </li> */}
 
                 <li className="inline">
                   <a
-                    href="/"
+                    href="https://discord.com/invite/VaRe94HWGy"
                     target="_blank"
                     className="btn btn-icon btn-sm border dark:border-gray-300 border-gray-600 rounded-md hover:border-red-600 dark:hover:border-red-600 hover:bg-red-600 dark:hover:bg-red-600"
                   >
@@ -70,14 +70,14 @@ export default function Footer() {
                 </li>
                 <li className="inline">
                   <a
-                    href="/"
+                    href="https://discord.com/invite/VaRe94HWGy"
                     target="_blank"
                     className="btn btn-icon btn-sm border dark:border-gray-300 border-gray-600 rounded-md hover:border-red-600 dark:hover:border-red-600 hover:bg-red-600 dark:hover:bg-red-600"
                   >
                     <FaDiscord className="align-middle dark:text-white text-black" />
                   </a>
                 </li>
-                <li className="inline">
+                {/* <li className="inline">
                   <a
                     href="/"
                     target="_blank"
@@ -94,7 +94,7 @@ export default function Footer() {
                   >
                     <FaFacebook className="align-middle dark:text-white text-black" />
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

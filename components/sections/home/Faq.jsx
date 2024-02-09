@@ -1,6 +1,18 @@
 import React from "react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
+import "react-accessible-accordion/dist/fancy-example.css";
 
 export default function Faq() {
+  const styles = {
+    bgColor: "transparent",
+  };
+
   return (
     <div className="container md:mt-24 mt-16">
       <div className="grid grid-cols-1 text-center">
@@ -13,187 +25,63 @@ export default function Faq() {
           Dpay with their fans and unique token collectors!
         </p>
       </div>
-
-      <div className="flex justify-center mt-10">
-        <div className="lg:w-2/3">
-          <div
-            id="accordion-collapseone"
-            data-accordion="collapse"
-            className="mt-6"
-          >
-            <div className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden">
-              <h2
-                className="text-base font-semibold"
-                id="accordion-collapse-heading-1"
-              >
-                <button
-                  type="button"
-                  className="flex justify-between items-center p-5 w-full font-semibold text-start"
-                  data-accordion-target="#accordion-collapse-body-1"
-                  aria-expanded="true"
-                  aria-controls="accordion-collapse-body-1"
-                >
-                  <span>What happens when I hold $Dpay ?</span>
-                  <svg
-                    data-accordion-icon
-                    className="w-4 h-4 rotate-180 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-collapse-body-1"
-                className="hidden"
-                aria-labelledby="accordion-collapse-heading-1"
-              >
-                <div className="p-5">
-                  <p className="text-slate-400 dark:text-gray-400">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
-              <h2
-                className="text-base font-semibold"
-                id="accordion-collapse-heading-2"
-              >
-                <button
-                  type="button"
-                  className="flex justify-between items-center p-5 w-full font-semibold text-start"
-                  data-accordion-target="#accordion-collapse-body-2"
-                  aria-expanded="false"
-                  aria-controls="accordion-collapse-body-2"
-                >
-                  <span>How do I create my own collection ?</span>
-                  <svg
-                    data-accordion-icon
-                    className="w-4 h-4 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-collapse-body-2"
-                className="hidden"
-                aria-labelledby="accordion-collapse-heading-2"
-              >
-                <div className="p-5">
-                  <p className="text-slate-400 dark:text-gray-400">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
-              <h2
-                className="text-base font-semibold"
-                id="accordion-collapse-heading-3"
-              >
-                <button
-                  type="button"
-                  className="flex justify-between items-center p-5 w-full font-semibold text-start"
-                  data-accordion-target="#accordion-collapse-body-3"
-                  aria-expanded="false"
-                  aria-controls="accordion-collapse-body-3"
-                >
-                  <span>How does Dpay wallet work ?</span>
-                  <svg
-                    data-accordion-icon
-                    className="w-4 h-4 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-collapse-body-3"
-                className="hidden"
-                aria-labelledby="accordion-collapse-heading-3"
-              >
-                <div className="p-5">
-                  <p className="text-slate-400 dark:text-gray-400">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
-              <h2
-                className="text-base font-semibold"
-                id="accordion-collapse-heading-4"
-              >
-                <button
-                  type="button"
-                  className="flex justify-between items-center p-5 w-full font-semibold text-start"
-                  data-accordion-target="#accordion-collapse-body-4"
-                  aria-expanded="false"
-                  aria-controls="accordion-collapse-body-4"
-                >
-                  <span>What happens when I hold $Dpay?</span>
-                  <svg
-                    data-accordion-icon
-                    className="w-4 h-4 shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-collapse-body-4"
-                className="hidden"
-                aria-labelledby="accordion-collapse-heading-4"
-              >
-                <div className="p-5">
-                  <p className="text-slate-400 dark:text-gray-400">
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="mt-3">
+        <Accordion
+          allowMultipleExpanded={true}
+          className="rounded-md cs-border"
+        >
+          <AccordionItem>
+            <AccordionItemHeading>
+              <AccordionItemButton className="dark:bg-slate-800 px-4 py-6 bg-gray-200 rounded-t-md">
+                What is $dpay?
+              </AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+              <p>
+                $dpay is not just another DRC-20 token. It&#39;s an emblem of
+                the online zeitgeist, an extraordinary digital currency and
+                ecosystem that transcends the norms of blockchain utility.
+                Inspired by the fun and whimsical culture of the Doge meme,
+                DogePay is on an unstoppable mission to make a difference — both
+                in the blockchain universe and in the real world. We encourage
+                the creation of Doge-tastic Doge ordinals aka Doginals and help
+                folks with innovative inscription/shibescription services. We
+                also developed a one-of-a-kind wallet and market for all your
+                DRC-20 and Doginals needs.
+              </p>
+            </AccordionItemPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionItemHeading>
+              <AccordionItemButton className="dark:bg-slate-800 px-4 py-6 bg-gray-200 ">
+                How does $dpay wallet work?
+              </AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+              <p>
+                $Dpay Market comes with built-in wallet, there is no need to
+                download any browser extension. Your private keys are stored in
+                the browser and are never sent to the server
+              </p>
+            </AccordionItemPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionItemHeading>
+              <AccordionItemButton className="dark:bg-slate-800 px-4 py-6 bg-gray-200 ">
+                What can $dpay holders get?
+              </AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+              <p>
+                As a $dpay holder, you have exclusive access to a range of
+                benefits and privileges on our $dpay marketplace. One of the key
+                advantages is the significant reduction in fees for all services
+                offered on the platform, including trading, inscription, and
+                more.
+              </p>
+            </AccordionItemPanel>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );

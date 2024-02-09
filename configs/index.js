@@ -1,7 +1,12 @@
 export const navigation = [
   {
-    label: "Marketplace",
+    label: "Market",
     link: "/marketplace",
+    hasMenu: false,
+  },
+  {
+    label: "Swap",
+    link: "/swap",
     hasMenu: false,
   },
   {

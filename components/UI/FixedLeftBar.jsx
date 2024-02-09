@@ -3,6 +3,17 @@ import { MdOutlineWbSunny } from "react-icons/md";
 import { SlArrowUp } from "react-icons/sl";
 
 export default function FixedLeftBar() {
+  function changeTheme(e) {
+    e.preventDefault();
+    const htmlTag = document.getElementsByTagName("html")[0];
+
+    if (htmlTag.className.includes("dark")) {
+      htmlTag.className = "light";
+    } else {
+      htmlTag.className = "dark";
+    }
+  }
+
   return (
     <div>
       <a
@@ -13,21 +24,13 @@ export default function FixedLeftBar() {
         <SlArrowUp className=" text-center align-middle mt-2 ml-2" />
       </a>
 
-      <div className="fixed top-[25%] -left-2 z-50 hidden sm:block">
-        <span className="relative inline-block rotate-90">
-          <input
-            type="checkbox"
-            className="checkbox opacity-0 absolute"
-            id="chk"
-          />
-          <label
-            className="label bg-slate-900 dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8"
-            htmlFor="chk"
-          >
-            <FaMoon className="text-[20px] text-gray-500" />
-            <MdOutlineWbSunny className="text-[20px] text-gray-500" />
-            <span className="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
-          </label>
+      <div
+        className="fixed top-[25%] left-1 z-50 hidden sm:block p-1 rounded-full bg-red-600"
+        onClick={changeTheme}
+      >
+        <span className="relative rotate-90 dark:bg-white p-2 bg-slate-900 rounded-full cursor-pointer w-[35px] h-[35px] flex justify-center items-center">
+          <FaMoon className="text-[24px] text-gray-200 dark:hidden" />
+          <MdOutlineWbSunny className="text-[22px] text-slate-900 dark:inline-block hidden" />
         </span>
       </div>
     </div>

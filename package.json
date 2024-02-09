@@ -51,6 +51,7 @@
     "nft.storage": "^7.1.1",
     "randomstring": "^1.2.3",
     "react": "18.2.0",
+    "react-accessible-accordion": "^5.0.0",
     "react-bootstrap": "^2.8.0",
     "react-click-outside": "^3.0.1",
     "react-confirm-modal-v1": "^1.0.4",
