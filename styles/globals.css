@@ -143,3 +143,17 @@ body {
 .in-link {
   @apply text-sm text-gray-300  flex justify-center;
 }
+
+iframe {
+  height: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+iframe html body {
+  height: 80vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

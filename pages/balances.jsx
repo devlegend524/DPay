@@ -1,25 +1,74 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "@/components/sections/layouts/Layout";
 import openApi from "@/services/openAPI";
 import ReactPaginate from "react-paginate";
-import TokenAvatar from "../components/UI/TokenAvatar";
 import { CiSearch } from "react-icons/ci";
+import { BiLoaderCircle } from "react-icons/bi";
+import { useWallet } from "@/store/hooks";
 
 const Balances = () => {
-  const [data, setData] = useState({ list: [], total: 0, DOGEprice: 0.081529 });
+  const { price } = useWallet();
+  const [balance, setBalance] = useState(0);
   const [searchKey, setSearchKey] = useState("");
-  const [search, setSearch] = useState("");
+  const [type, setType] = useState("dorginals");
+
   const [offset, setOffset] = useState(0);
-  const [sort, setSort] = useState("desc");
-  const [orderBy, setOrderBuy] = useState("price");
+  const [total, setTotal] = useState(0);
+  const [pageSize, setPageSize] = useState(48);
   const [fetchingData, setFetchingData] = useState(false);
-  const [avatar, setAvater] = useState(false);
+  const [inscriptions, setInscriptions] = useState([]);
+  const [tokens, setTokens] = useState([]);
+
+  const handlePageClick = (e) => {
+    setOffset(e.selected * pageSize);
+  };
+
+  const getDoginals = async () => {
+    setType("dorginals");
+    setFetchingData(true);
+    try {
+      const res = await openApi.getAddressInscriptions(
+        searchKey,
+        offset,
+        pageSize
+      );
+      if (res.total > 0) {
+        setTotal(res.total);
+        setInscriptions(res.list);
+      }
+
+      setFetchingData(false);
+    } catch (error) {
+      setFetchingData(false);
+    }
+  };
+
+  const getLtc20 = async () => {
+    setType("drc20");
+    setFetchingData(true);
+    try {
+      const res = await openApi.getAddressTokenBalances(
+        searchKey,
+        offset,
+        pageSize
+      );
+
+      if (res.total > 0) {
+        setTotal(total);
+        setTokens(res.list);
+      }
+
+      setFetchingData(false);
+    } catch (error) {
+      setFetchingData(false);
+    }
+  };
 
   const fetchbalance = async (address) => {
     try {
       if (address) {
-        const res = await openApi.sync(address);
+        setFetchingData(true);
 
         const utxos = await openApi.getAddressBalance(address);
         let balance = 0;
@@ -35,17 +84,17 @@ const Balances = () => {
           20
         );
 
-        const ltc20 = await openApi.getAddressTokenBalances(address, 0, 20);
-
-        console.log(ltc20, inscriptions, balance);
+        const drc20 = await openApi.getAddressTokenBalances(address, 0, 20);
+        setTotal(inscriptions.total);
+        setInscriptions(inscriptions.list);
+        setTokens(drc20.list);
+        setBalance(balance);
+        setFetchingData(false);
       }
     } catch (error) {
-       console.log(error);
+      setFetchingData(false);
+      // console.log(error);
     }
-  };
-
-  const handlePageClick = (e) => {
-    setOffset(e.selected);
   };
 
   const handleSearchKey = (e) => {
@@ -60,21 +109,67 @@ const Balances = () => {
     }
   };
 
-  const fetchData = async () => {
-    setFetchingData(true);
-    const res = await fetch(
-      `/drc20/api/get_list?offset=${
-        offset * 20
-      }&orderDirection=${sort}&orderBy=${orderBy}&search=${search}`
-    );
-    const resJson = await res.json();
-    setData(resJson);
-    setFetchingData(false);
+  const renderIterms = (type) => {
+    if (type === "dorginals") {
+      return (
+        <>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 w-full">
+            {inscriptions.map((iterm) => {
+              return (
+                <div className="in-card" key={iterm.inscriptionNumber}>
+                  <div className="in-content">
+                    <iframe
+                      src={iterm.content}
+                      frameBorder="0"
+                      width="100%"
+                      height="100%"
+                      className="flex justify-center items-center bg-black rounded-md w-full h-full"
+                    ></iframe>
+                  </div>
+                  <p className="text-center text-sm mt-2">
+                    #{iterm.inscriptionNumber}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      );
+    } else if (type === "drc20") {
+      return (
+        <>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 w-full">
+            {tokens.map((item, key) => {
+              return (
+                <div className="in-card" key={item.ticker + key}>
+                  <p className="text-lg font-semibold text-sky-500">
+                    {item.ticker}
+                  </p>
+                  <div className="flex gap-1 justify-between text-sm">
+                    <p className="dark:text-gray-200 text-gray-800">
+                      Transferable:
+                    </p>
+                    <p>{item.transferableBalance}</p>
+                  </div>
+                  <div className="flex gap-1 justify-between text-sm">
+                    <p className="dark:text-gray-200 text-gray-800">
+                      Available:
+                    </p>
+                    <p>{item.availableBalance}</p>
+                  </div>
+                  <hr className="cs-border" />
+                  <div className="flex gap-1 justify-between text-sm">
+                    <p className="dark:text-gray-200 text-gray-800">overall</p>
+                    <p>{item.overallBalance}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      );
+    }
   };
-
-  useEffect(() => {
-    fetchData();
-  }, [search, sort, orderBy, offset]);
 
   return (
     <Layout>
@@ -102,7 +197,7 @@ const Balances = () => {
               className="form-input w-full ps-10 pr-24 py-2 pl-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-3xl outline-none border border-gray-200 focus:border-red-600 dark:border-gray-800 dark:focus:border-red-600 focus:ring-0 bg-white text-sm"
               name="s"
               id="searchItem"
-              placeholder="Search drc20 token and doginal balances for ticker"
+              placeholder="Search drc20 token and doginal balances for address"
               onKeyUp={(e) => handleSearch(e)}
             />
             <button
@@ -114,145 +209,86 @@ const Balances = () => {
           </div>
         </div>
 
-        <div className="rounded-md mt-1 grid sm:grid-cols-8 grid-cols-4 duration-100 items-center w-full">
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 flex gap-2 rounded-l-md">
-            Ticker
+        <div className="gap-2 sm:flex sm:justify-between w-full border-b pb-2 dark:border-slate-700 border-gray-300">
+          <div className="form-icon relative flex sm:hidden w-full mb-3">
+            <CiSearch className="text-lg absolute top-1/2 -translate-y-1/2 start-3" />
+            <input
+              type="text"
+              className="form-input w-full sm:w-44 ps-10 py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-3xl outline-none border border-gray-200 focus:border-red-600 dark:border-gray-800 dark:focus:border-red-600 focus:ring-0 bg-white text-sm"
+              name="s"
+              id="searchItem"
+              placeholder="Search"
+            />
           </div>
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 ">
-            Price
-          </div>
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 hidden sm:inline-block">
-            floor
-          </div>
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 ">
-            Change
-          </div>
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 hidden sm:inline-block">
-            Volume
-          </div>
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 hidden sm:inline-block">
-            Sales
-          </div>
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 rounded-r-md sm:rounded-r-none">
-            Holers
-          </div>
-          <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 rounded-r-md hidden sm:inline-block">
-            Minted
+
+          <div className="flex justify-between items-center gap-1 w-full">
+            <div className="flex justify-center">
+              {" "}
+              <button
+                className={`py-2 sm:w-24 h-full w-full focus:outline-none text-center cursor-pointer text-sm  rounded-md ${
+                  type == "dorginals" ? "main_btn" : ""
+                }`}
+                onClick={() => getDoginals()}
+              >
+                Doginals
+              </button>
+              <button
+                className={`py-2 sm:w-24 h-full w-full focus:outline-none text-center cursor-pointer text-sm  rounded-md ${
+                  type == "drc20" ? "main_btn" : ""
+                }`}
+                onClick={() => getLtc20()}
+              >
+                DRC-20
+              </button>
+            </div>
+            <div className="text-sm flex gap-2">
+              <span>
+                {balance / 10 ** 8 ? (balance / 10 ** 8).toFixed(2) : "0.00"}{" "}
+                <span className="text-sm font-bold text-orange-500">DOGE</span>{" "}
+              </span>
+              <span className="text-sm font-extralight dark:text-gray-200 text-slate-900">
+                ~${" "}
+                {(balance / 10 ** 8) * price
+                  ? ((balance / 10 ** 8) * price).toFixed(2)
+                  : "0.00"}
+              </span>
+            </div>
           </div>
         </div>
 
-        <div className="w-full">
-          {fetchingData ? (
-            <>
-              {Array.from({ length: 20 }, (_, index) => {
-                return (
-                  <div
-                    className="py-2 dark:bg-slate-800/50 bg-gray-100 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-md mt-1 grid sm:grid-cols-8 grid-cols-4 duration-100 cursor-pointer items-center"
-                    key={index}
-                  >
-                    <div className="flex gap-2 px-2">
-                      <div className="rounded-full w-[30px] h-[30px] bg-slate-800" />
-                      <p className="text-orange-500 font-semibold"></p>
-                    </div>
-                    <div className="px-2">
-                      <p className="h-4 bg-slate-800 animate-pulse w-12 rounded-md"></p>
-                    </div>
-                    <div className="hidden sm:inline-block px-2">
-                      <p className="h-4 bg-slate-800 animate-pulse w-12 rounded-md"></p>
-                    </div>
-                    <div>
-                      <p className="h-4 bg-slate-800 animate-pulse w-12 rounded-md"></p>
-                    </div>
-                    <div className="hidden sm:inline-block px-2">
-                      <p className="h-4 bg-slate-800 animate-pulse w-12 rounded-md"></p>
-                    </div>
-                    <div className="px-2 hidden sm:inline-block">
-                      <p className="h-4 bg-slate-800 animate-pulse w-12 rounded-md"></p>
-                    </div>
-                    <div>
-                      <p className="h-4 bg-slate-800 animate-pulse w-12 rounded-md"></p>
-                    </div>
-                    <div>
-                      <p className="h-4 bg-slate-800 animate-pulse w-12 rounded-md"></p>
-                    </div>
-                  </div>
-                );
-              })}
-            </>
-          ) : (
-            <>
-              {data.list.map((token, key) => {
-                return (
-                  <div
-                    className="py-2 dark:bg-slate-800/50 bg-gray-100 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-md mt-1 grid sm:grid-cols-8 grid-cols-4 duration-100 cursor-pointer items-center"
-                    key={key + offset}
-                  >
-                    <div className="flex gap-2 px-2">
-                      <TokenAvatar
-                        url={`https://drc-20-icons.s3.eu-central-1.amazonaws.com/${token.tick}.png`}
-                        tick={token.tick.slice(0, 1)}
-                      />
-                      <p className="text-orange-500 font-semibold">
-                        {token.tick}
-                      </p>
-                    </div>
-                    <div className="px-2">
-                      ${" "}
-                      {(
-                        (token.currentPrice / 10 ** 8) *
-                        data.DOGEprice
-                      ).toFixed(3)}
-                    </div>
-                    <div className="hidden sm:inline-block px-2">
-                      ${" "}
-                      {((token.floorPrice / 10 ** 8) * data.DOGEprice).toFixed(
-                        3
-                      )}
-                    </div>
-                    <div
-                      className={`px-2 ${
-                        token.changePercent >= 0
-                          ? "text-green-500"
-                          : "text-red-400"
-                      }`}
-                    >
-                      {token.changePercent > 0 && "+"}
-                      {token.changePercent.toFixed(4)}
-                    </div>
-                    <div className="hidden sm:inline-block px-2">
-                      $ {((token.volume / 10 ** 8) * data.DOGEprice).toFixed(3)}
-                    </div>
-                    <div className="px-2 hidden sm:inline-block">
-                      {token.sales}
-                    </div>
-                    <div>{token.holders}</div>
-                    <div className="dark:bg-slate-800 bg-gray-200 p-1 rounded-lg w-[80%] hidden sm:inline-block">
-                      <div
-                        className={`bg-green-500 h-2 w-[${
-                          (Number(token.currentSupply) /
-                            Number(token.maxSupply)) *
-                          100
-                        }%] rounded-lg animate-pulse`}
-                      ></div>
-                    </div>
-                  </div>
-                );
-              })}
-            </>
-          )}
-        </div>
+        {fetchingData ? (
+          <>
+            <div className="flex justify-center items-center h-[200px]">
+              <BiLoaderCircle className="text-3xl animate-spin" />
+            </div>
+          </>
+        ) : (
+          <>
+            {total > 0 ? (
+              <>
+                <div className="my-8 w-full">{renderIterms(type)}</div>
 
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel=">"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={2}
-          marginPagesDisplayed={1}
-          pageCount={Math.ceil(data.total / 20)}
-          previousLabel="<"
-          renderOnZeroPageCount={null}
-          className="pagination"
-        />
+                <ReactPaginate
+                  breakLabel="..."
+                  nextLabel=">"
+                  onPageChange={handlePageClick}
+                  pageRangeDisplayed={2}
+                  marginPagesDisplayed={1}
+                  pageCount={total / pageSize}
+                  previousLabel="<"
+                  renderOnZeroPageCount={null}
+                  className="pagination"
+                />
+              </>
+            ) : (
+              <>
+                <div className="flex justify-center items-center h-[200px]">
+                  No Data. {":("}
+                </div>
+              </>
+            )}
+          </>
+        )}
       </div>
     </Layout>
   );
