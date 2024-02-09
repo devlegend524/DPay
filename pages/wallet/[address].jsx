@@ -91,8 +91,6 @@ export default function WalletOthers() {
     }
   }, [isMobile()]);
 
-  console.log(inscriptions);
-
   const renderIterms = (type) => {
     if (type === "dorginals") {
       return (

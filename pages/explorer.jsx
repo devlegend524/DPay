@@ -20,15 +20,25 @@ const Explorer = () => {
     setOffset(e.selected);
   };
 
-  const handleSearchKey = (e) => {
+  const searchByTicker = async (ticker) => {
+    setFetchingData(true);
+    const res = await fetch(
+      `/drc20/api/get_list?offset=${0}&orderDirection=${sort}&orderBy=${orderBy}&search=${ticker}`
+    );
+    const resJson = await res.json();
+    setData(resJson);
+    setFetchingData(false);
+  };
+
+  const handleSearchKey = async (e) => {
     if (searchKey) {
-      setSearch(searchKey);
+      searchByTicker(searchKey);
     }
   };
 
-  const handleSearch = (e) => {
+  const handleSearch = async (e) => {
     if (e.keyCode === 13) {
-      setSearch(e.target.value);
+      searchByTicker(e.target.value);
     }
   };
 
