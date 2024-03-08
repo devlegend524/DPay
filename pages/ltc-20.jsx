@@ -6,13 +6,13 @@ import { useEffect } from "react";
 import { useState } from "react";
 import LTCCollectionTr from "../components/UI/LTCCollectionTr";
 
-export default function Ltc20() {
+export default function DRC20() {
   const [collections, setColections] = useState();
 
   async function getCollection() {
     const [collectionsFromGithub] = await Promise.all([
       fetch(
-        `https://raw.githubusercontent.com/nextidearly/collections/main/LTC20/metas.json`
+        `https://raw.githubusercontent.com/nextidearly/collections/main/DRC20/metas.json`
       ).then((response) => response.json()),
     ]);
     setColections(collectionsFromGithub);
@@ -26,18 +26,15 @@ export default function Ltc20() {
     <Layout>
       <Head>
         <title>Dpay - NFT Collections</title>
-        <meta
-          name="description"
-          content="Dpay - NFT Collections for market"
-        />
+        <meta name="description" content="Dpay - NFT Collections for market" />
       </Head>
 
       <div className="">
         <h2 className="text-4xl font-bold mt-16 mb-2 text-center sm:text-left">
-          LTC20 Collections
+          DRC20 Collections
         </h2>
         <p className="text-sm text-center w-full max-w-[900px] mb-12 mx-auto lg:px-[150px]">
-          LTC20 PSBT market place on Dogecoin.
+          DRC20 PSBT market place on Dogecoin.
         </p>
       </div>
 

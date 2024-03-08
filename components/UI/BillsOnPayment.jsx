@@ -23,9 +23,9 @@ export default function BillsOnPayment({ length, setFee }) {
     <>
       <div className="mt-2">
         <div className="grid grid-cols-2 font-light py-1 text-sm">
-          <p className="text-right pr-2 ">Sats In Inscription:</p>
+          <p className="text-right pr-2 ">Shibes In Inscription:</p>
           <p className="text-left pl-2 ">
-            {length} * 10000 sats
+            {length} * 10000 shibes
             <span className="text-[11px] text-gray-300 ">
               &nbsp; ~$&nbsp;
               {((inscribeFee / 10 ** 8) * account.price).toFixed(2)}
@@ -36,7 +36,7 @@ export default function BillsOnPayment({ length, setFee }) {
         <div className="grid grid-cols-2 font-light py-1  text-sm">
           <p className="text-right pr-2">Service Fee:</p>
           <p className="text-left pl-2">
-            {serviceFee} sats
+            {serviceFee} shibes
             <span className=" text-[11px] text-gray-300 ">
               {" "}
               &nbsp;~$ {((serviceFee / 10 ** 8) * account.price).toFixed(2)}
@@ -47,7 +47,7 @@ export default function BillsOnPayment({ length, setFee }) {
         <div className="grid grid-cols-2 font-light py-1  text-sm">
           <p className="text-right pr-2">Size Fee:</p>
           <p className="text-left pl-2">
-            {sizeFee} sats
+            {sizeFee} shibes
             <span className=" text-[11px] text-gray-300 ">
               {" "}
               &nbsp;~$ {((sizeFee / 10 ** 8) * account.price).toFixed(2)}
@@ -58,7 +58,7 @@ export default function BillsOnPayment({ length, setFee }) {
         <div className="grid grid-cols-2 font-light py-1  text-sm">
           <p className="text-right pr-2">=</p>
           <p className="text-left pl-2">
-            <span className="line-through"> {totalFee}</span> sats
+            <span className="line-through"> {totalFee}</span> shibes
             <span className=" text-[11px] text-gray-300 ">
               {" "}
               &nbsp;~$ {((totalFee / 10 ** 8) * account.price).toFixed(2)}
@@ -69,7 +69,7 @@ export default function BillsOnPayment({ length, setFee }) {
         <div className="grid grid-cols-2 font-light py-1 mt-3  text-sm">
           <p className="text-right pr-2">Total Sats To Pay:</p>
           <p className="text-left pl-2">
-            {totalFee - (totalFee % 1000)} sats
+            {totalFee - (totalFee % 1000)} shibes
             <span className=" text-[11px] text-gray-300 ">
               {" "}
               &nbsp;~${" "}
@@ -82,9 +82,9 @@ export default function BillsOnPayment({ length, setFee }) {
         </div>
 
         <div className="grid grid-cols-2 font-light py-1  text-sm">
-          <p className="text-right pr-2">Total LTC To Pay:</p>
+          <p className="text-right pr-2">Total DOGE To Pay:</p>
           <p className="text-left pl-2 flex gap-1">
-            {(totalFee - (totalFee % 1000)) / 100000000} LTC
+            {(totalFee - (totalFee % 1000)) / 100000000} DOGE
             <span className=" text-[11px] text-gray-300 ">
               {" "}
               &nbsp;~${" "}

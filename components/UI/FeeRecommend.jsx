@@ -65,7 +65,7 @@ export default function FeeRecommend({ setFeeOption }) {
                       setFeeOptionIndex(index);
                     }}
                     className={`cursor-pointer flex justify-center flex-col rounded-md cs-border px-2 w-full py-3 ${
-                      selected && "bg-[#103e5c]"
+                      selected && "bg-[#dc2626]"
                     }`}
                   >
                     <p className="text-center text-sm font-semibold">
