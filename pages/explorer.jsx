@@ -116,7 +116,7 @@ const Explorer = () => {
             Sales
           </div>
           <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 rounded-r-md sm:rounded-r-none">
-            Holers
+            Holders
           </div>
           <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 rounded-r-md hidden sm:inline-block">
             Minted
