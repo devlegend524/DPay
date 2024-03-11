@@ -25,8 +25,8 @@ export default function DRC20() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - NFT Collections</title>
-        <meta name="description" content="Dpay - NFT Collections for market" />
+        <title>DPAY - NFT Collections</title>
+        <meta name="description" content="DPAY - NFT Collections for market" />
       </Head>
 
       <div className="">

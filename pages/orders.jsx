@@ -62,11 +62,8 @@ export default function Orders() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Orders</title>
-        <meta
-          name="description"
-          content="Dpay - Orders history for inscribe"
-        />
+        <title>DPAY - Orders</title>
+        <meta name="description" content="DPAY - Orders history for inscribe" />
       </Head>
 
       {/* <button onClick={test}>test</button> */}

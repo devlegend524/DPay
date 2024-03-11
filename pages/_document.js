@@ -7,16 +7,16 @@ export default function Document() {
         <meta name="description" content="Ordinals Dogecoin inscriptions." />
         <meta
           name="keywords"
-          content="Dpay, inscription, bitcoin, brc20, nft, Ordinals, Dogecoin"
+          content="DPAY, inscription, bitcoin, brc20, nft, Ordinals, Dogecoin"
         />
-        <meta property="og:title" content={`Dpay`} />
+        <meta property="og:title" content={`DPAY`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content={`Dogecoin Ordinals marketplace | Buy & Sell Dogecoin inscriptions`}
         />
         <meta property="og:url" content={`https://dpay-market.vercel.app/`} />
-        <meta property="og:site_name" content="Dpay"></meta>
+        <meta property="og:site_name" content="DPAY"></meta>
         <meta
           property="og:image"
           content="https://dpay-market.vercel.app/metaImage.jpg"

@@ -124,15 +124,15 @@ const WaitingPayment = ({ totalFee, networkFee }) => {
                 >
                   <input
                     checked={paymentType === "chain" ? "checked" : ""}
-                    id="default-Dpay-1"
-                    type="Dpay"
+                    id="default-DPAY-1"
+                    type="DPAY"
                     value={paymentType}
                     onChange={() => handlePaymentType("chain")}
-                    name="default-Dpay"
+                    name="default-DPAY"
                     className="w-4 h-4 text-gray-300  bg-gray-100 border-gray-300 focus:ring-blue-500"
                   />
                   <label
-                    htmlFor="default-Dpay-1"
+                    htmlFor="default-DPAY-1"
                     className="ml-2 text-gray-700  cursor-pointer"
                   >
                     Pay on chain DOGE
@@ -149,15 +149,15 @@ const WaitingPayment = ({ totalFee, networkFee }) => {
                 >
                   <input
                     checked={paymentType === "wallet" ? "checked" : ""}
-                    id="default-Dpay-2"
-                    type="Dpay"
+                    id="default-DPAY-2"
+                    type="DPAY"
                     value={paymentType}
-                    name="default-Dpay"
+                    name="default-DPAY"
                     onChange={() => handlePaymentType("wallet")}
                     className="w-4 h-4 text-gray-300  bg-gray-100 border-gray-300 focus:ring-blue-500"
                   />
                   <label
-                    htmlFor="default-Dpay-2 "
+                    htmlFor="default-DPAY-2 "
                     className="ml-2 text-gray-700  cursor-pointer"
                   >
                     Pay with Wallet

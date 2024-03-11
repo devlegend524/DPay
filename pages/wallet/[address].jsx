@@ -171,10 +171,10 @@ export default function WalletOthers() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Wallet</title>
+        <title>DPAY - Wallet</title>
         <meta
           name="description"
-          content="Dpay - wallet history and inscriptions"
+          content="DPAY - wallet history and inscriptions"
         />
       </Head>
 

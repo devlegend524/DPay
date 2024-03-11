@@ -86,7 +86,6 @@ export default function Bills({
       <div className="text-sm font-extralight flex justify-center w-full mt-3 text-red-500">
         <p className="flex gap-1 text-center">
           <AiFillWarning className="text-lg" />
-          We dont verify if these dpays are minted or not.
         </p>
       </div>
     </>

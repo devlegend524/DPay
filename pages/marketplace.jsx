@@ -6,12 +6,14 @@ const Market = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - market</title>
-        <meta name="description" content="Dpay - Dpay market" />
+        <title>DPAY - market</title>
+        <meta name="description" content="DPAY - DPAY market" />
       </Head>
 
       <div className="h-full flex flex-col items-center justify-center mt-32">
-        <h1 className="text-5xl font-bold mb-8 animate-pulse">Market - Coming Soon.</h1>
+        <h1 className="text-5xl font-bold mb-8 animate-pulse">
+          Market - Coming Soon.
+        </h1>
         <p className="text-lg mb-8 text-center">
           We are working hard to give you something cool!
         </p>

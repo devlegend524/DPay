@@ -22,7 +22,7 @@ export default function Faq() {
 
         <p className="text-slate-400 max-w-xl mx-auto">
           We are a huge marketplace dedicated to connecting great artists of all
-          Dpay with their fans and unique token collectors!
+          DPAY with their fans and unique token collectors!
         </p>
       </div>
       <div className="mt-3">
@@ -33,12 +33,12 @@ export default function Faq() {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton className="dark:bg-slate-800 px-4 py-6 bg-gray-200 rounded-t-md">
-                What is $dpay?
+                What is $DPAY?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p>
-                $dpay is not just another DRC-20 token. It&#39;s an emblem of
+                $DPAY is not just another DRC-20 token. It&#39;s an emblem of
                 the online zeitgeist, an extraordinary digital currency and
                 ecosystem that transcends the norms of blockchain utility.
                 Inspired by the fun and whimsical culture of the Doge meme,
@@ -54,12 +54,12 @@ export default function Faq() {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton className="dark:bg-slate-800 px-4 py-6 bg-gray-200 ">
-                How does $dpay wallet work?
+                How does $DPAY wallet work?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p>
-                $Dpay Market comes with built-in wallet, there is no need to
+                $DPAY Market comes with built-in wallet, there is no need to
                 download any browser extension. Your private keys are stored in
                 the browser and are never sent to the server
               </p>
@@ -68,13 +68,13 @@ export default function Faq() {
           <AccordionItem>
             <AccordionItemHeading>
               <AccordionItemButton className="dark:bg-slate-800 px-4 py-6 bg-gray-200 ">
-                What can $dpay holders get?
+                What can $DPAY holders get?
               </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel>
               <p>
-                As a $dpay holder, you have exclusive access to a range of
-                benefits and privileges on our $dpay marketplace. One of the key
+                As a $DPAY holder, you have exclusive access to a range of
+                benefits and privileges on our $DPAY marketplace. One of the key
                 advantages is the significant reduction in fees for all services
                 offered on the platform, including trading, inscription, and
                 more.

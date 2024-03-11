@@ -25,7 +25,7 @@ const Inscribe = () => {
                 srcset=""
                 className="w-[28px] h-[28px]"
               />
-              <p> $Dpay</p>
+              <p> $DPAY</p>
             </div>
 
             <input
@@ -66,20 +66,20 @@ const Inscribe = () => {
           <div className="mt-6">
             Available Exchanges
             <div className="flex gap-2 justify-between w-full text-sm h-[28px] items-center border-b dark:border-slate-500/30 border-gray-200/30 border-[0.5px]">
-              <div>1000 $dpay / 1 DOGE</div>
+              <div>1000 $DPAY / 1 DOGE</div>
               <div className="px-3 py-0.5 dark:bg-slate-700 bg-gray-200 rounded-full flex items-center">
                 Best Match
               </div>
             </div>
             <div className="flex gap-2 justify-between w-full text-sm h-[28px] items-center border-b dark:border-slate-500/30 border-gray-200/30 border-[0.5px]">
-              <div>1000 $dpay / 1 DOGE</div>
+              <div>1000 $DPAY / 1 DOGE</div>
               <div></div>
             </div>
             <div className="flex gap-2 justify-between w-full text-sm h-[28px] items-center border-b dark:border-slate-500/30 border-gray-200/30 border-[0.5px]">
-              <div>1000 $dpay / 1 DOGE</div>
+              <div>1000 $DPAY / 1 DOGE</div>
             </div>
             <div className="flex gap-2 justify-between w-full text-sm h-[28px] items-center border-b dark:border-slate-500/30 border-gray-200/30 border-[0.5px]">
-              <div>1000 $dpay / 1 DOGE</div>
+              <div>1000 $DPAY / 1 DOGE</div>
               <div></div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const Inscribe = () => {
                 srcset=""
                 className="w-[28px] h-[28px]"
               />
-              <p> $Dpay</p>
+              <p> $DPAY</p>
             </div>
 
             <input
@@ -150,8 +150,8 @@ const Inscribe = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Inscribe</title>
-        <meta name="description" content="Dpay - Dpay inscribe" />
+        <title>DPAY - Inscribe</title>
+        <meta name="description" content="DPAY - DPAY inscribe" />
       </Head>
 
       <div className="mt-16">

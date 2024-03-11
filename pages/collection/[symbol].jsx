@@ -113,10 +113,10 @@ export default function Collection() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - {collection?.name} Market </title>
+        <title>DPAY - {collection?.name} Market </title>
         <meta
           name="description"
-          content="Dpay - NFTs Market place on Dogecoin"
+          content="DPAY - NFTs Market place on Dogecoin"
         />
       </Head>
 

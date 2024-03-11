@@ -174,8 +174,8 @@ const Balances = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Balances</title>
-        <meta name="description" content="Dpay - Dpay Balances" />
+        <title>DPAY - Balances</title>
+        <meta name="description" content="DPAY - DPAY Balances" />
       </Head>
 
       <div className="h-full flex flex-col items-center justify-center mt-16 container-fluid mx-auto max-w-[1600px]">
@@ -184,7 +184,7 @@ const Balances = () => {
         </h1>
 
         <div className="dark:text-gray-200 text-slate-800 text-center mb-8 max-w-[600px]">
-          $dpay market has a powerful scanner designed to simplify the search
+          $DPAY market has a powerful scanner designed to simplify the search
           for DRC20 tokens and Doginal balances by address.
         </div>
 

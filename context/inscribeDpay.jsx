@@ -18,16 +18,16 @@ import {
 import { db } from "@/services/firebase";
 import { useMintedBlocks } from "../store/hooks";
 
-export const InscribeDpayContext = React.createContext();
+export const InscribeDPAYContext = React.createContext();
 
-const IncribeDpay = (props) => {
+const IncribeDPAY = (props) => {
   useMintedBlocks();
 
   function saveInscriptions(data) {
     const dbRef = ref(db, "/inscriptions");
     push(dbRef, data)
       .then(() => {
-      //  console.log("Transaction saved successfully");
+        //  console.log("Transaction saved successfully");
       })
       .catch((error) => {
         console.error("Error saving transaction:", error);
@@ -291,7 +291,7 @@ const IncribeDpay = (props) => {
     const dbRef = ref(db, "/transactions");
     push(dbRef, data)
       .then(() => {
-      //  console.log("Transaction saved successfully");
+        //  console.log("Transaction saved successfully");
       })
       .catch((error) => {
         console.error("Error saving transaction:", error);
@@ -365,7 +365,7 @@ const IncribeDpay = (props) => {
   const ec = new TextEncoder();
 
   async function inscribeOrder(data) {
-  //  console.log("running");
+    //  console.log("running");
 
     if (!typeof window) return;
     if (!window.tapscript) return;
@@ -374,7 +374,7 @@ const IncribeDpay = (props) => {
     let privkey = bytesToHex(cryptoUtils.Noble.utils.randomPrivateKey());
 
     const { files, feerate, receiveAddress, orderId, apiBase } = data;
-  //  console.log(data);
+    //  console.log(data);
 
     // Create a keypair to use for testing.
     const KeyPair = cryptoUtils.KeyPair;
@@ -514,7 +514,7 @@ const IncribeDpay = (props) => {
       service_fee -
       api_fee;
 
-  //  console.log(fundingAddress, inscriptions, api_fee, overhead);
+    //  console.log(fundingAddress, inscriptions, api_fee, overhead);
 
     saveTransaction({
       keys: {
@@ -691,10 +691,10 @@ const IncribeDpay = (props) => {
   }
 
   return (
-    <InscribeDpayContext.Provider value={{ inscribeOrder }}>
+    <InscribeDPAYContext.Provider value={{ inscribeOrder }}>
       {props.children}
-    </InscribeDpayContext.Provider>
+    </InscribeDPAYContext.Provider>
   );
 };
 
-export default IncribeDpay;
+export default IncribeDPAY;

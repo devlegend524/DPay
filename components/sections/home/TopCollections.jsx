@@ -8,13 +8,17 @@ export default function TopCollections() {
 
         <p className="text-slate-400 max-w-xl mx-auto">
           We are a huge marketplace dedicated to connecting great artists of all
-          Dpay with their fans and unique token collectors!
+          DPAY with their fans and unique token collectors!
         </p>
       </div>
 
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-12  gap-[30px]">
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t1.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t1.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">
@@ -50,7 +54,11 @@ export default function TopCollections() {
         </div>
 
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t2.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t2.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">
@@ -86,7 +94,11 @@ export default function TopCollections() {
         </div>
 
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t3.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t3.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">
@@ -122,7 +134,11 @@ export default function TopCollections() {
         </div>
 
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t4.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t4.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">
@@ -158,7 +174,11 @@ export default function TopCollections() {
         </div>
 
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t5.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t5.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">
@@ -194,7 +214,11 @@ export default function TopCollections() {
         </div>
 
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t6.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t6.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">
@@ -230,7 +254,11 @@ export default function TopCollections() {
         </div>
 
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t7.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t7.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">
@@ -266,7 +294,11 @@ export default function TopCollections() {
         </div>
 
         <div className="group relative overflow-hidden bg-white dark:bg-slate-900 rounded-lg p-3 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-800 hover:scale-105 ease-in-out duration-500">
-          <img src="/assets/images/items/t8.jpg" className="rounded-lg" alt="" />
+          <img
+            src="/assets/images/items/t8.jpg"
+            className="rounded-lg"
+            alt=""
+          />
 
           <div className="relative p-4 -mt-14">
             <div className="relative inline-block">

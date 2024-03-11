@@ -19,7 +19,10 @@ const InscriptionList = () => {
       </p>
       <p className="text-[11px] text-gray-300  text-center">
         You are about to inscribe
-        <span className="text-white font-semibol"> {inscribe?.selectedBlock?.length} </span>
+        <span className="text-white font-semibol">
+          {" "}
+          {inscribe?.selectedBlock?.length}{" "}
+        </span>
         dpay(s)
       </p>
       <div className="flex flex-col mt-2 items-center rounded w-full max-h-[200px] bg-primary-dark/20  px-3 py-2 cursor-pointer  overflow-y-auto overflow-x-hidden scroll-smooth	transition ease-in-out duration-150">
@@ -29,7 +32,7 @@ const InscriptionList = () => {
               key={index}
               className="flex relative justify-between w-full rounded px-4 py-2 m-1 items-center bg-[#1a537798] drop-shadow hover:bg-[#246da1cb] transition ease-in-out"
             >
-              <div className="font-extralight">{item.blockNumber}.Dpay</div>
+              <div className="font-extralight">{item.blockNumber}.DPAY</div>
               <div className="flex items-center justify-center">
                 <FaTimes
                   onClick={(e) => removeBlock(item.blockNumber)}

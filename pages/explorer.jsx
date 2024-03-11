@@ -61,8 +61,8 @@ const Explorer = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Explorer</title>
-        <meta name="description" content="Dpay - Dpay Explorer" />
+        <title>DPAY - Explorer</title>
+        <meta name="description" content="DPAY - DPAY Explorer" />
       </Head>
 
       <div className="h-full flex flex-col items-center justify-center mt-16 container-fluid mx-auto max-w-[1600px]">
@@ -104,7 +104,7 @@ const Explorer = () => {
             Price{" "}
           </div>
           <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 hidden sm:inline-block">
-            floor
+            Floor
           </div>
           <div className="hover:bg-gray-200 dark:hover:bg-slate-800 dark:bg-slate-800/50 bg-gray-100 cursor-pointer p-2 ">
             Change

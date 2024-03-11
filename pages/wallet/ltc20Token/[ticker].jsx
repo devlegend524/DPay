@@ -138,10 +138,10 @@ export default function LTC20Token() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - LTC20 Token</title>
+        <title>DPAY - LTC20 Token</title>
         <meta
           name="description"
-          content="Dpay - wallet history and inscriptions"
+          content="DPAY - wallet history and inscriptions"
         />
       </Head>
 
@@ -203,7 +203,7 @@ export default function LTC20Token() {
 
       {fetchingData ? (
         <div className="my-auto flex  justify-center gap-2 items-center">
-          <ImSpinner10  className="text-3xl animate-spin" />
+          <ImSpinner10 className="text-3xl animate-spin" />
         </div>
       ) : (
         <>

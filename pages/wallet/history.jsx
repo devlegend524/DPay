@@ -7,16 +7,14 @@ export default function WalletHistory() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Wallet</title>
+        <title>DPAY - Wallet</title>
         <meta
           name="description"
-          content="Dpay - wallet history and inscriptions"
+          content="DPAY - wallet history and inscriptions"
         />
       </Head>
 
-      <h1 className="text-3xl font-semibold my-16 text-center">
-        My Wallet
-      </h1>
+      <h1 className="text-3xl font-semibold my-16 text-center">My Wallet</h1>
 
       <div className="flex justify-center sm:justify-between w-full container mx-auto">
         <Tabs type={"history"} loading={false} />

@@ -64,7 +64,7 @@ const AttachFileComponent = ({
     </div>
   ) : (
     <>
-      <label>{fileName ? fileName : "Upload file to subscribe"} </label>
+      <label>{fileName ? fileName : "Upload file to inscribe"} </label>
       <div
         {...getRootProps()}
         className="w-full min-h-[150px] flex justify-center items-center border  rounded-md"

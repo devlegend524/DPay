@@ -16,7 +16,7 @@ export default function Footer() {
             <div className="grid md:grid-cols-2 items-center gap-6">
               <div className="md:text-start text-center">
                 <div className="mb-0 flex gap-1">
-                  © 2024 Dpay. Design with{" "}
+                  © 2024 DPAY. Design with{" "}
                   <i className="mdi mdi-heart text-red-600"></i> by{" "}
                   <a
                     href="https://t.me/genius021120"

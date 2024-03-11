@@ -6,17 +6,16 @@ import BestCreatorsAndSellers from "../components/sections/home/BestCreatorsAndS
 import TopCollections from "../components/sections/home/TopCollections";
 import Faq from "../components/sections/home/Faq";
 
-
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Market</title>
-        <meta name="description" content="Dpay - Dpay Market" />
+        <title>DPAY - Market</title>
+        <meta name="description" content="DPAY - DPAY Market" />
       </Head>
 
       <Banner />
-      
+
       <div className="relative md:py-24 py-16">
         <BestCreatorsAndSellers />
         <TopCollections />

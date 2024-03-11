@@ -96,10 +96,10 @@ const CreateOrder = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Create Order</title>
+        <title>DPAY - Create Order</title>
         <meta
           name="description"
-          content="Dpay - Create order to inscribe dpays"
+          content="DPAY - Create order to inscribe dpays"
         />
       </Head>
 
@@ -112,7 +112,7 @@ const CreateOrder = () => {
             <FaArrowLeft className="text-lg mt-3" />
           </div>
           <div className="py-2">
-            <h2 className="text-center text-2xl mb-3">Inscribe Dpay</h2>
+            <h2 className="text-center text-2xl mb-3">Inscribe DPAY</h2>
           </div>
           <InscriptionList />
           <InputAddress />

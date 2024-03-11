@@ -66,8 +66,8 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Market For All Ordinals</title>
-        <meta name="description" content="Dpay -  Market For All Ordinals" />
+        <title>DPAY - Market For All Ordinals</title>
+        <meta name="description" content="DPAY -  Market For All Ordinals" />
       </Head>
 
       <Banner

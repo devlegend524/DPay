@@ -88,12 +88,6 @@ export default function WalletMain({ setContentType }) {
               >
                 <Menu.Items className="absolute right-0 z-20 mt-2 w-[200px!important] p-3 dark:bg-[#243355] bg-gray-200  shadow shadow-black  origin-top-right rounded-md focus:outline-none">
                   <button
-                    onClick={() => wallet.unlockWallet()}
-                    className="hover:bg-primary-dark/30 transition ease-in-out rounded-md focus:outline-none text-left w-full p-1"
-                  >
-                    Unlock wallet
-                  </button>
-                  <button
                     onClick={() => setContentType("send")}
                     className="hover:bg-primary-dark/30 transition ease-in-out rounded-md focus:outline-none text-left w-full p-1"
                   >
@@ -133,7 +127,7 @@ export default function WalletMain({ setContentType }) {
             className="py-1 rounded-lg cursoer-pointer focus:outline-none"
             onClick={() => setListType("list")}
           >
-            Lists
+            Listings
           </button>
           <button
             className="py-1 rounded-lg cursoer-pointer focus:outline-none"

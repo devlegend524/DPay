@@ -5,7 +5,7 @@ import "tailwindcss/tailwind.css";
 import NextNProgress from "nextjs-progressbar";
 import Head from "next/head";
 import WalletContext from "@/context/wallet";
-import InscribeDpayContext from "@/context/inscribeDpay";
+import InscribeDPAYContext from "@/context/inscribeDPAY";
 import { ToastContainer } from "react-toastify";
 import { Provider } from "react-redux";
 import { makeStore } from "./../store/store";
@@ -36,13 +36,13 @@ function App({ Component, pageProps }) {
         <PersistGate loading={null} persistor={persistor}>
           <ThemeContextProvider>
             <ThemeProvider attribute="class">
-              <InscribeDpayContext>
+              <InscribeDPAYContext>
                 <WalletContext>
                   <NextNProgress color="#185380" />
                   <Component {...pageProps} />
                   <ToastContainer />
                 </WalletContext>
-              </InscribeDpayContext>
+              </InscribeDPAYContext>
             </ThemeProvider>
           </ThemeContextProvider>
         </PersistGate>

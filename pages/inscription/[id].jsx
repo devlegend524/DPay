@@ -56,8 +56,8 @@ export default function Inscription(props) {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Inscription Detail</title>
-        <meta name="description" content="Dpay - Inscription Detail" />
+        <title>DPAY - Inscription Detail</title>
+        <meta name="description" content="DPAY - Inscription Detail" />
       </Head>
 
       <p className="my-8 text-center text-3xl font-semibold">

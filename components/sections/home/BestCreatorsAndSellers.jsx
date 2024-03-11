@@ -10,7 +10,7 @@ export default function BestCreatorsAndSellers() {
 
         <p className="text-slate-400 max-w-xl mx-auto">
           We are a huge marketplace dedicated to connecting great artists of all
-          Dpay with their fans and unique token collectors!
+          DPAY with their fans and unique token collectors!
         </p>
       </div>
 

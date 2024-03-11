@@ -13,18 +13,18 @@ export default function Layout(props) {
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
-          content="Dpay: The Best ordinals market place on Dogecoin"
+          content="DPAY: The Best ordinals market place on Dogecoin"
         />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
         <meta
-          content="Dpay, ordinals, litecoin, PSBT, market place, NFTs, NFT, Banksy superstar set 1, Lil Ordies, Lite Punks, Dogecoin Glitch Ordinals, Moonbirds, Punks, ordirobots, Ballers, Drip Cats, Armored, Lizards  "
+          content="DPAY, ordinals, litecoin, PSBT, market place, NFTs, NFT, Banksy superstar set 1, Lil Ordies, Lite Punks, Dogecoin Glitch Ordinals, Moonbirds, Punks, ordirobots, Ballers, Drip Cats, Armored, Lizards  "
           name="keywords"
         />
         <meta property="og:title" content="ordinals.fun " />
         <meta property="og:type" content="ordinals.fun" />
         <meta
           property="og:description"
-          content="Dpay: The Best ordinals market place on Dogecoin"
+          content="DPAY: The Best ordinals market place on Dogecoin"
         />
         <meta property="og:url" content="https://dpay-xi.vercel.app" />
         <meta property="og:site_name" content="ordinals.fun"></meta>

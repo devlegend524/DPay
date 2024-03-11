@@ -21,8 +21,8 @@ const Inscribe = () => {
   return (
     <Layout>
       <Head>
-        <title>Dpay - Inscribe</title>
-        <meta name="description" content="Dpay - Dpay inscribe" />
+        <title>DPAY - Inscribe</title>
+        <meta name="description" content="DPAY - DPAY inscribe" />
       </Head>
 
       <div className="mt-16">
